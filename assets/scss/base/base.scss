@@ -1,3 +1,7 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
 body {
     font-family:"Red Hat Display", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
 }
@@ -5,11 +9,13 @@ body {
 img {
     max-width: 100%;
     height: auto;
+    vertical-align: middle;
 }
 
 a {
     color: inherit;
     display: inline-block;
+    text-decoration: none;
 }
 
 h1,
@@ -31,4 +37,71 @@ p {
     @include media-breakpoint-up(lg) {
         font-size: 1.5rem;
     }
+}
+
+
+
+//font type usage
+//title
+.title-M {
+    &-CH {
+        font-size: 1.125rem;
+        letter-spacing: 0.04rem;
+        font-weight: 700;
+    }
+    &-EN {
+        font-size: 1.125rem;
+        letter-spacing: 0.04rem;
+        font-weight: 800;
+    }
+}
+
+.title-S {
+    &-CH {
+        font-size: 1rem;
+        letter-spacing: 0.04rem;
+        font-weight: 700;
+    }
+    &-EN {
+        font-size: 1rem;
+        letter-spacing: 0.04rem;
+        font-weight: 800;
+    }
+}
+
+.subtitle {
+    &-CH {
+        font-size: 0.875rem;
+        letter-spacing: 0.04rem;
+        font-weight: 700;
+    }
+    &-EN {
+        font-size: 0.875rem;
+        letter-spacing: 0.04rem;
+        font-weight: 800;
+    }
+}
+
+//body
+.body {
+    letter-spacing: 0.04rem;
+    font-weight: 500;
+    &-L {
+        font-size: 1.125rem;
+    }
+
+    &-M {
+        font-size: 1rem;
+    }
+
+    &-S {
+        font-size: 0.875rem;
+    }
+}
+
+//caption
+.caption {
+    font-size: 0.75rem;
+    letter-spacing: 0.04rem;
+    font-weight: 500;
 }
