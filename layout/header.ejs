@@ -1,4 +1,60 @@
-<h1 class="header">我是 header</h1>
-<a href="index.html">index</a>
-<a href="about.html">about</a>
-<a href="contact.html">contact</a>
+<header class="header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-neutral-50 border-bottom border-primary-300 py-3 py-lg-4">
+        <div class="container-fluid px-lg-10">
+            <a class="navbar-brand navbar-brand-size me-auto" href="#">
+                <img src="../assets/images/Logo.svg" alt="logo" >
+            </a>
+            <!-- 分頁及Offcanvas -->
+            <!-- Offcanvas的btn-close hover顏色無法改 -->
+            <div class="offcanvas offcanvas-top" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                <div class="offcanvas-header border-bottom border-primary-300">
+                    <a class="navbar-brand navbar-brand-size " href="#">
+                        <img src="../assets/images/Logo.svg" alt="logo" >
+                    </a>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body navOffcanvas ms-lg-auto">
+                    <ul class="navbar-nav gap-11 mb-lg-0 gap-lg-5 ">
+                        <li class="nav-item">
+                            <a class="nav-link title-S-CH px-3 py-2" aria-current="page" href="#">每日一卡</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link title-S-CH px-3 py-2"  href="#">卡組介紹</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link title-S-CH px-3 py-2"  href="#">商城</a>
+                        </li>
+                    </ul>
+                </div>  
+            </div>
+            <!-- 會員及購物車icon -->
+            <div class="d-flex gap-11 ms-lg-10">
+                <ul class="navbar-nav flex-row navIcon gap-11">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="user" href="#">
+                            <i class="bi bi-person text-neutral-800 navIconBtn"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="cart" href="#">
+                            <i class="bi bi-cart3 text-neutral-800 navIconBtn"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- 漢堡選單本體 -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 至頂按鈕 -->
+      <div class="container-fluid">
+          <a class="btn btn-outline-primary-500 toTopBtn border-2 rounded-pill p-2 p-lg-3" href="#" role="button" tabindex="0">
+            <img src="../assets/images/Arrow.svg" alt="toTopArrow" class="d-block toTopArrow"> 
+          </a>
+
+      </div>
+
+</header>
