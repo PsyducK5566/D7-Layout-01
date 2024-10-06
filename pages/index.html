@@ -8,48 +8,100 @@
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    
-    <h1 class="index-title py-1">我是首頁</h1>
-     
+    <section class="banner">
+      <div class="container my-5">
+        <div class="row">
+          <div class="col">
+            <div class="bannerBackGround">
+              <div class="image-wrapper">
+                <p class="image-slogan">循序著命運呼喚的方向</p>
+                <img
+                  src="../assets/images/heroLargeHead.png"
+                  class="image-a"
+                  alt="翻開未来的序章"
+                />
+                <img
+                  src="..//assets/images/heroBackgroundPattern.png"
+                  class="image-b"
+                  alt="背景光芒"
+                />
+                <button class="hero-button mt-3">每日一卡</button>
+              </div>
 
-    <div class="card" style="width: 18rem">
-      <img src="../assets/images/cat.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
-        </p>
-      </div>
-    </div>
-
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
-
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
+              <div class="d-flex justify-content-between mt-4">
+                <img
+                  src="../assets/images/heroBoy.png"
+                  alt="Left Character"
+                  class="hero-image"
+                />
+                <img
+                  src="../assets/images/heroGirl.png"
+                  alt="Right Character"
+                  class="hero-image"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section class="iWant">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="main-title h1 text-center">
+              <span class="star">✦</span> 我想知道 <span class="star">✦</span>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-3">
+                <img src="../assets/images/whoIAm.png" alt="whoIAm" />
+              </div>
+              <div class="col-lg-3">
+                <img src="..//assets/images/whereIAm.png" alt="whereIAm" />
+              </div>
+              <div class="col-lg-3">
+                <img src="../assets/images/whereToGo.png" alt="whereToGo" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="guide-title h1 text-center">
+              <span class="star">✦</span> 牌卡心靈指引
+              <span class="star">✦</span>
+            </div>
+            <p class="subtitle text-center">
+              引導做出適合的選擇。<br />相信自己的念，了解內心真實的自己
+            </p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-3">
+            <img src="..//assets/images/cardRelation.png" alt="relation" />
+          </div>
+          <div class="col-lg-3">
+            <img src="..//assets/images/cardSelf.png" alt="self" />
+          </div>
+          <div class="col-lg-3">
+            <img src="..//assets/images/cardChoice.png" alt="choice" />
+          </div>
+          <div class="col-lg-3">
+            <img src="../assets/images/cardMindfulness.png" alt="mindfulness" />
+          </div>
+        </div>
+
+        <button class="btn btn-custom">牌卡介紹</button>
+      
+      </div>
+    </section>
 
     <%- include('./layout/footer'); -%>
 

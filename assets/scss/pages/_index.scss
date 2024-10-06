@@ -1,3 +1,92 @@
-.index-title {
-  font-size: 100px;
+//banner
+
+.bannerBackGround {
+  background-color: $primary-300;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 15px;
+}
+
+
+.image-wrapper {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+
+  .image-slogan {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    // transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .image-b {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .image-a {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    max-width: 100%;
+    /* 調整圖片 A 的大小 */
+    height: auto;
+  }
+
+  .hero-button {
+    position: absolute;
+    top: 85%;
+    left: 40%;
+    background-color: $primary-500;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+  }
+
+}
+
+.hero-image {
+  max-width: 100%;
+
+}
+
+//iWant
+
+.iWant{
+  // background-color: #fff7e6;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.star {
+  font-size: 28px;
+  color: $primary-500;
+}
+
+//guide
+.guide{
+  // background-color: ;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+.subtitle {
+  font-size: 18px;
+  color: $primary-700;
+  margin-bottom: 30px;
+}
+
+.btn-custom {
+  background-color: $primary-500;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-top: 30px;
 }
