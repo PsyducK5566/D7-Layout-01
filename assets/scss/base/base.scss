@@ -42,16 +42,41 @@ p {
 
 
 //font type usage
+//heading
+.heading {
+    letter-spacing: 0.04em;
+    font-weight: 900;
+    line-height: 1.2;
+    &-H1 {
+        font-size: 3rem;
+    }
+    &-H2 {
+        font-size: 2.5rem;
+    }
+    &-H3 {
+        font-size: 2rem;
+    }
+    &-H4 {
+        font-size: 1.75rem;
+    }
+    &-H5 {
+        font-size: 1.5rem;
+    }
+    &-H6 {
+        font-size: 1.25rem;
+    }
+}
+
 //title
 .title-M {
     &-CH {
         font-size: 1.125rem;
-        letter-spacing: 0.04rem;
+        letter-spacing: 0.04em;
         font-weight: 700;
     }
     &-EN {
         font-size: 1.125rem;
-        letter-spacing: 0.04rem;
+        letter-spacing: 0.04em;
         font-weight: 800;
     }
 }
@@ -59,12 +84,12 @@ p {
 .title-S {
     &-CH {
         font-size: 1rem;
-        letter-spacing: 0.04rem;
+        letter-spacing: 0.04em;
         font-weight: 700;
     }
     &-EN {
         font-size: 1rem;
-        letter-spacing: 0.04rem;
+        letter-spacing: 0.04em;
         font-weight: 800;
     }
 }
@@ -72,19 +97,19 @@ p {
 .subtitle {
     &-CH {
         font-size: 0.875rem;
-        letter-spacing: 0.04rem;
+        letter-spacing: 0.04em;
         font-weight: 700;
     }
     &-EN {
         font-size: 0.875rem;
-        letter-spacing: 0.04rem;
+        letter-spacing: 0.04em;
         font-weight: 800;
     }
 }
 
 //body
 .body {
-    letter-spacing: 0.04rem;
+    letter-spacing: 0.04em;
     font-weight: 500;
     &-L {
         font-size: 1.125rem;
@@ -102,6 +127,6 @@ p {
 //caption
 .caption {
     font-size: 0.75rem;
-    letter-spacing: 0.04rem;
+    letter-spacing: 0.04em;
     font-weight: 500;
 }

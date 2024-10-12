@@ -1,7 +1,284 @@
-.pageMT {
-    margin-top: 72px;
-    //padding-top: 72px;
+// * {
+//     outline: blue 1px solid;
+// }
+//banner
+.bannerBackground {
+    background: $primary-400;
+    border-radius: 2rem;
+    height: 280px;
+    margin-top: 84px;
+    margin-bottom: 12px;
+    
     @include media-breakpoint-up(lg) {
-        margin-top: 88px;
+        border-radius: 3rem;
+        height: 400px;
+        margin-top: 136px;
+        margin-bottom: 80px;
+
+    }
+}
+
+.bannerTextSize {
+    text-align: center;
+    z-index: 1;
+    margin-bottom: 0;
+    //title-M-CH
+    font-size: 1.125rem;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    line-height: 1.5;
+    
+    @include media-breakpoint-up(lg) {
+        //heading-H4
+        font-size: 1.75rem;
+        letter-spacing: 0.04em;
+        font-weight: 900;
+        line-height: 1.2;
+    }
+}
+
+.bannerTextImg {
+    width: 325px;
+    z-index: 1;
+    @include media-breakpoint-up(lg) {
+    width: 624px;
+    }
+}
+
+.bannerUnion {
+    width: 151px;
+    position: absolute;
+    transform: translate(-50%,0);
+    top: 18px;
+    left: 50%;
+    z-index: 0;
+    @include media-breakpoint-up(lg) {
+        width: 260px;
+        transform: translate(-50%,0);
+        top: 15px;
+    }
+    @include media-breakpoint-up(xxl) {
+        width: 368px;
+        transform: translate(-50%,-50%);
+        top: 200px;
+    }
+}
+
+.bannerCardLeft {
+    width: 127px;
+    display: block;
+    margin: auto;
+    @include media-breakpoint-up(lg) {
+        width: 330px;
+        position: absolute;
+        top: 260px;
+        left: 50%;
+        transform: translate(-50%,0);
+        z-index: 0;
+    }
+    
+    @include media-breakpoint-up(xxl) {
+        position: absolute;
+        top: 100px;
+        left: 80px;
+        transform: translate(0,0);
+        z-index: 0;
+    }
+}
+
+.bannerCardRight {
+    width: 127px;
+    display: block;
+    margin: auto;
+    @include media-breakpoint-up(lg) {
+        width: 330px;
+    }
+    
+    @include media-breakpoint-up(xxl) {
+        
+        position: absolute;
+        //top: 0px;
+        
+        bottom: 100px;
+        right: 80px;
+        transform: translate(0,0);
+        z-index: 0;
+    }
+}
+
+//body-標題
+.cardTitle {
+    //margin-top: 64px;
+    //margin-bottom: 284px;
+    gap: 0.5rem;
+    @include media-breakpoint-up(lg) {
+        //margin-top: 80px;
+        //margin-bottom: 240px;
+        gap: 1rem;
+    }
+}
+
+.cardTitleFontSize {
+    //heading-H4
+    letter-spacing: 0.04em;
+    font-weight: 900;
+    line-height: 1.2;
+    font-size: 1.75rem;
+
+    @include media-breakpoint-up(lg) {
+        //heading-H1
+        font-size: 3rem;
+    }
+}
+.cardTitleStar {
+    width: 1rem;
+    @include media-breakpoint-up(lg) {
+        width: 1.75rem;
+    }
+}
+
+//body-卡片區
+.cardContent {
+    //background: $yellow-03;
+    padding: 140px 16px 24px 16px;
+    border-radius: 2rem;
+    @include media-breakpoint-up(lg) {
+        padding: 64px;
+        border-radius: 3rem;
+    }
+}
+
+.itemImg {
+    max-width: 256px;
+    border-radius: 24px;
+    border-width: 8px;
+    border-style: solid;
+    
+    -webkit-transition: opacity 2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -o-transition: opacity .2s ease-in-out;
+    transition: opacity .1s ease-in-out;
+    @include media-breakpoint-up(lg) {
+        max-width: 400px;
+        border-radius: 32px;
+        transform: translate(0,0);
+        bottom: 16px;
+        left: 0px;
+    }
+
+    &:hover {
+        opacity:0;
+        
+    }
+
+    &Position {
+        transform: translate(-50%,0);
+        bottom: 40px;
+        left: 50%;
+        z-index: 1;
+        @include media-breakpoint-up(lg) {
+            transform: translate(0,0);
+            bottom: 0px;
+            left: 0px;
+        }
+    }
+    &PositionReverse {
+        transform: translate(-50%,0);
+        bottom: 40px;
+        left: 50%;
+        z-index: 1;
+        @include media-breakpoint-up(lg) {
+            transform: translate(-100%,0);
+            bottom: 0px;
+            left: 100%;
+        }
+    }
+}
+
+.itemIcon {
+    width: 110px;
+    @include media-breakpoint-up(lg) {
+        width: 207px;
+    }
+
+    &Position {
+        transform: translate(0,0);
+        bottom: -20px;
+        left: -45px;
+        z-index: 2;
+        @include media-breakpoint-up(lg) {
+            transform: translate(0,0);
+            bottom: -94px;
+            left: -75px;
+        }
+        @include media-breakpoint-up(xl) {
+            transform: translate(0,0);
+            bottom: -94px;
+            left: -103px;
+        }
+    }
+    &PositionReverse {
+        transform: translate(0,0);
+        bottom: -20px;
+        left: -45px;
+        z-index: 2;
+        @include media-breakpoint-up(lg) {
+            transform: translate(0,0);
+            bottom: -94px;
+            left: 258px;
+        }
+        @include media-breakpoint-up(xl) {
+            transform: translate(0,0);
+            bottom: -94px;
+            left: 277px;
+        }
+    }
+}
+
+
+.itemTitleFontSize {
+    //heading-H5
+    letter-spacing: 0.04em;
+    font-weight: 900;
+    line-height: 1.2;
+    font-size: 1.5rem;
+    @include media-breakpoint-up(lg) {
+        //heading-H2
+        font-size: 2.5rem;
+    }
+}
+
+.itemTextFontSize {
+    //body-S
+    letter-spacing: 0.04em;
+    font-weight: 500;
+    font-size: 0.875rem;
+    @include media-breakpoint-up(lg) {
+        //body-M
+        font-size: 1rem;
+    }
+}
+
+.itemBtn {
+    border: 0;
+    //subtitle-CH
+    font-size: 0.875rem;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    @include media-breakpoint-up(lg) {
+        //tiitle-S-CH
+        font-size: 1rem;
+    }
+
+    &:hover {
+        background: $primary-600;
+    }
+}
+
+
+.itemBtnArrow {
+    width: 1rem;
+    @include media-breakpoint-up(lg) {
+        width: 1.25rem;
     }
 }
