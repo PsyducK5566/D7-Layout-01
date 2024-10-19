@@ -4,72 +4,88 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>index</title>
-    <script type="module" crossorigin src="/D7-Layout-01/assets/main-d6aad723.js"></script>
-    <link rel="stylesheet" href="/D7-Layout-01/assets/main-506bd52d.css">
+    <script type="module" crossorigin src="/D7-Layout-01/assets/main-2a1750dd.js"></script>
+    <link rel="stylesheet" href="/D7-Layout-01/assets/main-4047dd3b.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="data:image/png;base64,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" class="" alt="Logo" />
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">每日一卡</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">卡組介紹</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">商城</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-person"></i></a>
-        </li>
-        <li class="nav-item position-relative">
-          <a class="nav-link" href="#">
-            <i class="bi bi-cart"></i>
-            <span
-              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-            >
-              5
-            </span>
+    <header class="header">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-neutral-50 border-bottom border-primary-300 py-3 py-lg-4">
+      <div class="container-fluid px-lg-10">
+          <a class="navbar-brand navbar-brand-size me-auto" href="index.html">
+              <img src="/D7-Layout-01/assets/Logo-ba8f05dc.svg" alt="logo" >
           </a>
-        </li>
-      </ul>
+          <!-- 分頁及Offcanvas -->
+          <!-- Offcanvas的btn-close hover顏色無法改 -->
+          <div class="offcanvas offcanvas-top" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+              <div class="offcanvas-header border-bottom border-primary-300">
+                  <a class="navbar-brand navbar-brand-size " href="#">
+                      <img src="/D7-Layout-01/assets/Logo-ba8f05dc.svg" alt="logo" >
+                  </a>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body navOffcanvas ms-lg-auto">
+                  <ul class="navbar-nav gap-11 mb-lg-0 gap-lg-5 ">
+                      <li class="nav-item">
+                          <a class="nav-link title-S-CH px-3 py-2" aria-current="page" href="#">每日一卡</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link title-S-CH px-3 py-2"  href="introduction.html">卡組介紹</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link title-S-CH px-3 py-2"  href="#">商城</a>
+                      </li>
+                  </ul>
+              </div>  
+          </div>
+          <!-- 會員及購物車icon -->
+          <div class="d-flex gap-11 ms-lg-10">
+              <ul class="navbar-nav flex-row navIcon gap-11">
+                  <li class="nav-item">
+                      <a class="nav-link" aria-current="user" href="#">
+                          <i class="bi bi-person text-neutral-800 navIconBtn"></i>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" aria-current="cart" href="#">
+                          <i class="bi bi-cart3 text-neutral-800 navIconBtn"></i>
+                      </a>
+                  </li>
+              </ul>
+              <!-- 漢堡選單本體 -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+          </div>
+      </div>
+  </nav>
+
+  <!-- 至頂按鈕 -->
+    <div class="container-fluid">
+        <a class="btn btn-outline-primary-500 toTopBtn border-2 rounded-pill p-2 p-lg-3" href="#" role="button" tabindex="0">
+          <img src="/D7-Layout-01/assets/Arrow-2601937e.svg" alt="toTopArrow" class="d-block toTopArrow"> 
+        </a>
+
     </div>
-  </div>
-</nav>
-    <section class="banner">
-      <div class="container my-5">
+
+</header>    <section class="banner">
+      <div class="container-fluid my-5">
         <div class="row">
-          <div class="col">
-            <div class="bannerBackGround">
+          <div class="col">            
               <div class="image-wrapper">
                 <p class="image-slogan">循序著命運呼喚的方向</p>
                 <img
                   src="/D7-Layout-01/assets/heroLargeHead-1486d7c3.png"
-                  class="image-a"
+                  class="image-a img-fluid"
                   alt="翻開未来的序章"
                 />
                 <img
                   src="/D7-Layout-01/assets/heroBackgroundPattern-0ec460a9.png"
-                  class="image-b"
+                  class="image-b img-fluid"
                   alt="背景光芒"
                 />
                 <button class="hero-button mt-3">每日一卡</button>
@@ -79,15 +95,14 @@
                 <img
                   src="/D7-Layout-01/assets/heroBoy-35a0bcfe.png"
                   alt="Left Character"
-                  class="hero-image"
+                  class="hero-image img-fluid"
                 />
                 <img
                   src="/D7-Layout-01/assets/heroGirl-e924d6fe.png"
                   alt="Right Character"
-                  class="hero-image"
+                  class="hero-image img-fluid"
                 />
-              </div>
-            </div>
+              </div>           
           </div>
         </div>
       </div>
@@ -97,19 +112,37 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <div class="main-title h1 text-center">
+            <div class="h1 text-center mb-10">
               <span class="star">✦</span> 我想知道 <span class="star">✦</span>
             </div>
             <div class="row justify-content-center">
-              <div class="col-lg-3">
-                <img src="/D7-Layout-01/assets/whoIAm-a620eabd.png" alt="whoIAm" />
+              <div class="col-md-3">
+                <div class="h-100 position-relative" style="top: -30px;">
+                  <img
+                  src="/D7-Layout-01/assets/whoIAm-a620eabd.png"
+                  alt="whoIAm"
+                  class="img-fluid"
+                />
               </div>
-              <div class="col-lg-3">
-                <img src="/D7-Layout-01/assets/whereIAm-f2139892.png" alt="whereIAm" />
+                </div>
+                
+              <div class="col-md-3">
+                <img
+                  src="/D7-Layout-01/assets/whereIAm-f2139892.png"
+                  alt="whereIAm"
+                  class="img-fluid"
+                />
               </div>
-              <div class="col-lg-3">
-                <img src="/D7-Layout-01/assets/whereToGo-ce224d74.png" alt="whereToGo" />
+              <div class="col-md-3">
+                <div class="h-100 position-relative" style="top: -30px;">
+                  <img
+                  src="/D7-Layout-01/assets/whereToGo-ce224d74.png"
+                  alt="whereToGo"
+                  class="img-fluid"
+                />
               </div>
+                </div>
+                
             </div>
           </div>
         </div>
@@ -118,9 +151,9 @@
 
     <section class="guide">
       <div class="container">
-        <div class="row">
+        <div class="row mt-10">
           <div class="col">
-            <div class="guide-title h1 text-center">
+            <div class="h1 text-center mb-10">
               <span class="star">✦</span> 牌卡心靈指引
               <span class="star">✦</span>
             </div>
@@ -130,42 +163,287 @@
           </div>
         </div>
 
-        <div class="row justify-content-center">
-          <div class="col-lg-3">
-            <img src="/D7-Layout-01/assets/cardRelation-80f97193.png" alt="relation" />
+        <div class="row d-flex justify-content-center mt-10">
+          <div class="col-md-3">
+            <div class="h-100 position-relative" style="top: -30px;">
+               <img
+              src="/D7-Layout-01/assets/cardRelation-80f97193.png"
+              alt="relation"
+              class="img-fluid"
+            />
+            </div>
+           
           </div>
-          <div class="col-lg-3">
-            <img src="/D7-Layout-01/assets/cardSelf-4e0e7943.png" alt="self" />
+          <div class="col-md-3">
+            <img
+              src="/D7-Layout-01/assets/cardSelf-4e0e7943.png"
+              alt="self"
+              class="img-fluid"
+            />
           </div>
-          <div class="col-lg-3">
-            <img src="/D7-Layout-01/assets/cardChoice-8eb5a35b.png" alt="choice" />
+          <div class="col-md-3">
+            <div class="h-100 position-relative" style="top: -30px;">
+              <img
+              src="/D7-Layout-01/assets/cardChoice-8eb5a35b.png"
+              alt="choice"
+              class="img-fluid"
+            />
           </div>
-          <div class="col-lg-3">
-            <img src="/D7-Layout-01/assets/cardMindfulness-b376023d.png" alt="mindfulness" />
+            </div>            
+          <div class="col-md-3">
+            <img
+              src="/D7-Layout-01/assets/cardMindfulness-b376023d.png"
+              alt="mindfulness"
+              class="img-fluid"
+            />
           </div>
         </div>
-
-        <button class="btn btn-custom">牌卡介紹</button>
-      
+        <div class="text-center m-10">
+          <button class="btn btn-customIndex">牌卡介紹</button>
+        </div>
+        
+      </div>
+      <div class="container m-8 y-5">
+        <div class="h1 text-center mb-10">
+          <span class="star">✦</span> 抽卡方式
+          <span class="star">✦</span>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-3 ">
+            <img
+              src="/D7-Layout-01/assets/Step_01-26aa9924.png"
+              alt="靜心"
+              class="img-fluid mb-3"
+            />
+            <h4>靜心</h4>
+            <p>請靜下心來，深呼機三次，將自己回到作平靜的狀態</p>
+          </div>
+          <div class="col-md-3">
+            <img
+              src="/D7-Layout-01/assets/Step_02-43bd3342.png"
+              alt="默念"
+              class="img-fluid mb-3"
+            />
+            <h4>默念</h4>
+            <p>請在心中默念一次占卜問題與選項</p>
+          </div>
+          <div class="col-md-3">
+            <img
+              src="/D7-Layout-01/assets/Step_03-702ae14b.png"
+              alt="抽卡"
+              class="img-fluid mb-3"
+            />
+            <h4>抽卡</h4>
+            <p>請點選「抽卡」按鈕</p>
+          </div>
+          <div class="col-md-3">
+            <img
+              src="/D7-Layout-01/assets/Step_04-ece174b2.png"
+              alt="解析"
+              class="img-fluid mb-3"
+            />
+            <h4>解析</h4>
+            <p>解析卡面了解現在</p>
+          </div>
+          <!-- <div class="col-md-2 d-none" id="extra-card">
+            <img
+              src="..//assets/images/Step=05.png"
+              alt="更多"
+              class="img-fluid mb-3"
+            />
+            <h4>更多</h4>
+            <p>更多資訊</p>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-primary" id="show-card-btn">→</button>
+          </div>
+        </div> -->
       </div>
     </section>
 
-    <footer class="bg-light py-3">
-  <div class="container text-center">
-    <img src="data:image/png;base64,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" alt="Logo" class="mb-3" />
-    <div class="mb-2">
-      <a href="#" class="text-dark mx-2">隱私權政策</a>
-      <span class="text-muted">✦</span>
-      <a href="#" class="text-dark mx-2">會員條款</a>
-      <span class="text-muted">✦</span>
-      <a href="#" class="text-dark mx-2">退換貨條款</a>
-    </div>
-    <a href="#" class="text-danger">
-      <i class="bi bi-arrow-up-circle"></i>
-    </a>
-  </div>
-</footer>
+    <section class="fragrance">
+      <div class="container my-10 text-center">
+        <div class="h1 text-center mb-10">
+          <span class="star">✦</span> 香氛能量指引
+          <span class="star">✦</span>
+        </div>
+              
+        <div class="mt-10">
+          <div class="row row-cols-md-2 justify-content-center">
+            <div class="col-12 mb-10 d-flex justify-content-center align-items-center">
+             
+                <img src="/D7-Layout-01/assets/Union-1-ea5f3ac4.png" class="img-fluid" alt="果香">
+                <div class="text-start mx-5">
+                <img src="data:image/png;base64,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" class="img-fluid">
+                  <p>清新果香味，<br>提神醒腦</p>
+                </div>
+            
+            </div>
+            <div class="col-12 mb-10 d-flex justify-content-center align-items-center">
+              
+                <img src="/D7-Layout-01/assets/Union-2-5b2150e6.png" class="img-fluid" alt="香草">
+                <div class="text-start mx-5">
+                  <img src="data:image/png;base64,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" class="img-fluid">
+                  <p>溫暖甜美，<br>舒緩心情</p>
+                </div>
+              
+            </div>
+            <div class="col-12 mb-10 d-flex justify-content-center align-items-center">
+              
+                <img src="/D7-Layout-01/assets/Union-3-d45437d2.png" class="img-fluid" alt="花香">
+                <div class="text-start mx-5">
+                  <img src="data:image/png;base64,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" class="img-fluid">
+                  <p>柔和芬芳，<br>提升情緒</p>
+                </div>
+              
+            </div>
+            <div class="col-12 mb-10 d-flex justify-content-center align-items-center">
+              
+                <img src="/D7-Layout-01/assets/Union-4-f2fc7575.png" class="img-fluid" alt="木香">
+                <div class="text-start mx-5">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAAAvCAYAAAB5ez3+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAdrSURBVHgB7VtPTBRXGP9m5dCDwHoDS9PVtkG4dE1JoQfrmrSmqdVi9aB4KGti4SRotKda2NKDEdKCJ4iNwEHqQRSxXvTAmh6KiY3roVL6j2kClptb7MFDdfv93s4sszs7s/NmZ5ep8ZcMO3+Z7/3e+/69+Z5CHiH8WihMTylMKd4UquZTIcPlJJ//k38XKED36F9KJFQ1SWVAOBQK0jqK8PtfZrnCfCqobTpUIZtCCZZNTfyqJsgDKOQSQuAKQeTHvLVStrBOgAaMcWdcZZJV8hBCtgB1cetAaITkkOTn4vw7lfhdHSeXkCY2IzRRN8mTaSXFFG9Did/UOBWB8KshENnjgkwrqJTu/HHZzpciNrw51ENeEmoGGhGTbQR3dojVfdRDQnOh8jaW+EONOX3AEbEsOOzmqGajyoFep43gzob29FLpOtsIlTt+h5OOL0hsmQVfRYrtXIqiVo3QnNKVEo5SOxzjjh+0u2Gd3UVN9U/z9gKVGwpHFQq11lQHry4nk1kRhFB9hX7ALq0N3qvZEKTlh8lbVjdYEquR2ktri2AuuRqpM4L4tUXEjty8psAnpBoB27aV0kT7gVQj8voDE7E8Ilo5nLpCfgNsbkD8RshvSDu0uPFUFrE+UrP/G5LQKKOjrci6rLD6e0BqU3MLvdHcnDm+dnmSHiwukp9RW1dH9Q0NtPHFOpoYGyVJwER9zb979RMZYkXW8pTTUw8AUju7ujPHP96eXTNiKyuraH11lfitrKoUxFXysf5bv6WRNjKplVVVq8/w+ZGhIZICO1nW+IhuElZHLFLBZwjXb30vCHODzqPdPBCW6NrkJannmFxwGMcu3IGeY0foGcL05CTJ4tGjFZq/f58ujJ4nJZUiafCkD0YtdtMj9gm1u5/n8ifm537K7BvNEPabWloyxzM3b9DE6Cg9WFr0xlwFxExfPE2sQh86fU63Wbb3VGVfr2V7Vlu3ZPvMXx7Z4FpN/efn5uj97dtM12FbvzEQCzKXlhazns3FP3+viNHsEPBT3YrmtGacPrXno30U6x8gr7H1lU1ULGBTYVu9xvDQII2clXBmHNcG+E+EnsNbBCgcYKf1Oj2Ht+BAQOF5gbskMUsEdWt6sznvtdq6lzh+7cp7Dd52gr2tFaYvy3vxQoA/aDscpUPth0123w6ICnSH5hIqiH1IHs21xs700559+y2vH2k7QHdu36ZSw45QxKa7DTJOa7FqrtxwasNnB/l+Vx2eBLEuAjYz9uxjp3bG3qlB2AMf7JLxsFLYzY616a0W2vHOThOheOdAXx937GyWg9MdEzTx3MS3ImowAsQjC5MdvQHyABCm42h34ftY+BOnTlGpUFVdzVHLfhOpd2ZnRYdO22RS6PRdb28zpbIYybH+fpJF0SMWanfxu+tZ6SN619jzucdQMelc3CFOfHaKDkUPZ717+pJcaoq2GE3DkbaDYqTLQAlvCi0UM6P11fAI7Xh3Z+Z4fu4+zdy4kTUJc7zzExH7ohN0lIpcjFbYetjSNiYYM21uAAcGgn/h9gzLy6kGmFRXFSkgKZdUjI7jnR2mex+trNDxjuzzmOjosIggioF4F8swc/MmFQP9/wy76fwUqUhp8c1G6qMc1Bqk1jc2Zp2Hc7DKt6FKGKFGMkFufUNj+rml0k4rQpMG+r6wvI42eZZRKnSvgjOvhIwLg3p1Hu0yOYgRVm1MaNgB6r+e50SNNhAjHuQWEdo4At5xbuIilQUK3QWlU07vR68iAchHqlOVGfiyzzTPCVu2paGRnhk8oVsVqPpjBxYXBWQFAHWFh7x47XrmHNT4wth5ksHnn54UE8m6WcBI72fCSwlkfgM278BggXnzAKikVPVpw6v8N+LkKV3AtmiUek6elA5DdED10VHi/zDRpQb8ARKAkkMhUSGTJvYpjbGdxWcFR6ktQhEE2/CcxQD/Y1r284e/ocIMYEcQK8zB5hCMpOPvXsWSWm5AO5CBWQGmwBg6ukSm3DPzQUare10gDyZk4IyMmRZCnbXoCKi/npTo37OsAGLrDQ7UxaearErE3IKNdiZX+qP6cxCYbDdWgJtLjDaFruAbOfkPeoZY3nJSZ0BRctR4wpwapCiKlIz8hxir2jHyH9R8cpnKOJeTycc1wSDCr1YeuX4ZHTEeEadZtkTNhiC0LEL+gG5Xl3Mv5K2PRS2qj8gFqb36wfLDZNwn5NqWzVsWHvuEXJSkn8496QNyC65FsC2V18iFp6st48IOAILvTSyolrMmgtzqIILxSFk7PkXjvO3Np/5G2BILwObyNsWNwMrCcBkaMcSkHmTBfy50I8ulalq1oQwdn9Tkgq1/XOhmuXVeKEwOULtYjeh1cXJ6lUwstzJaQrawqFFVPDcPCPPQ2YMyy1RdlcIJgtMq2FMkwRB0nIWecksomWUDwd1aPZp77UJHK5z3SxKqo+gaQ9GQAG3XykDDBYhOihg5LTDmgUu6WFlbTxER1T6rC5TzIx27J8Q6Wg/W93pevCnmHNIrv42NAHlJrxcjy8JCNpXSsnnawf8BFG4eCFB1XYUAAAAASUVORK5CYII=" class="img-fluid">
+                  <p>自然沈穩，<br>放鬆身心</p>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="position-relative">
+          <img src="data:image/png;base64,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" class="img-fluid rounded-circle" alt="bg-union">
+          <div class="position-absolute top-50 start-50 translate-middle text-dark">
+            <p class="mt-4">每種香氛都是一則故事，<br>讓身心找回自然而癒的力量！</p>            
+          </div>
+        </div>        
+        <div class="row">
+          <div class="col">
+            <img src="/D7-Layout-01/assets/Illustration Group-3207e066.png" class="img-fluid" alt="Group">
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="swiperArea">
+      <div class="container">
+        <div class="h1 text-center mb-10">
+          <span class="star">✦</span> 精選商品
+          <span class="star">✦</span>
+        </div>
+        
+        <div class="row row-cols-md-2 d-flex justify-content-center">
+          <div class="col-md-3">
+            <div class="text-center">
+              <img src="data:image/png;base64,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" class="img-fluid" alt="卡牌">
+            </div>
+            
+            <div class="swiper mx-5">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                <img src="/D7-Layout-01/assets/IMG_6910-f7f73cb8.JPG" class="swiper-img" alt="圖片1"></div>
+                <div class="swiper-slide">
+                <img src="/D7-Layout-01/assets/IMG_6912-14d0137d.JPG" class="swiper-img" alt="圖片2"></div>
+                <div class="swiper-slide">
+                <img src="/D7-Layout-01/assets/IMG_6916-6f7e5ff5.JPG" class="swiper-img" alt="圖片3"></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="text-center">
+              <img src="data:image/png;base64,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" class="img-fluid" alt="香氛">
+            </div>            
+            <div class="swiper mx-5">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                <img src="/D7-Layout-01/assets/IMG_7143-4470f307.JPG" class="swiper-img" alt="圖片1"></div>
+                <div class="swiper-slide">
+                <img src="/D7-Layout-01/assets/IMG_7144-f4eb71ca.JPG" class="swiper-img" alt="圖片2"></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center m-10">
+          <button class="btn btn-customIndex">查看更多</button>
+        </div>
+
+      </div>
+    
+      
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+      slidesPerView: 1,
+      spaceBetween: 48,
+      loop:true,
+      pagination: {
+      el: '.swiper-pagination',
+      },
+      navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+      },
+  //  pagination: {
+  //       el: ".swiper-pagination",
+  //       type: "progressbar",
+  //     },
+    });
+    </script>
+
+    <footer class="footer bg-primary-300 ">
+  <div class="bg-neutral-50 w-auto py-5 py-lg-7 rounded-bottom-pill"></div>
+  <div class="container-fluid px-lg-10">
+      <div class="text-center pt-7 pb-5 pt-lg-9 pb-lg-7">
+          <a class="mb-3 mb-lg-12" href="#">
+              <img src="/D7-Layout-01/assets/Logo-ba8f05dc.svg" alt="logo" class="footerBrandSize">
+          </a>
+          <div>
+              <ul class="d-flex justify-content-center align-items-center list-unstyled gap-1 gap-lg-0 mb-0 footerListColor">
+                  <li>
+                      <a href="#" class="footerListFontSize p-11 px-lg-3 py-lg-2">隱私權政策</a>
+                  </li>
+                  <li>
+                      <img src="/D7-Layout-01/assets/Star-6fc54e59.svg" alt="star" class="d-block" width="8px">
+                  </li>
+                  <li>
+                      <a href="#" class="footerListFontSize p-11 px-lg-3 py-lg-2">會員條款</a>
+                  </li>
+                  <li>
+                      <img src="/D7-Layout-01/assets/Star-6fc54e59.svg" alt="star" class="d-block" width="8px">
+                  </li>
+                  <li>
+                      <a href="#" class="footerListFontSize p-11 px-lg-3 py-lg-2">退換貨條款</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  <div class="border-top border-primary-400"></div>
+
+  <div class="container-fluid px-lg-10">
+      <div class="text-center py-5">
+          <ul class="d-flex flex-column flex-lg-row justify-content-lg-between list-unstyled text-primary-700 gap-3 mb-0">
+              <li class="footerCopyRightSize">
+                  五角占卜 &copy; 2024 All rights reserved.
+              </li>
+              <li class="footerCopyRightSize">
+                  *此網站僅供學習使用，不會作為商業用途
+              </li>
+          </ul>
+      </div>
+  </div>
+
+  
+
+</footer>
     
   </body>
 </html>
