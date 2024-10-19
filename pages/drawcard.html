@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>drawCard</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+    <div class="contentContainer">
+        <div class="mainContainer">
+            <section class="titleDailyCard">
+                <h1 class="textDailyCard">
+                    <span class="mr-15"><img src="../assets/images/Vector.png" alt="decStar"></span>
+                    每日一卡
+                    <span class="ml-15"><img src="../assets/images/Vector.png" alt="decStar"></span>
+                </h1>
+            </section>
+            <section class="drawcardAnimation">
+                <h5>覺得迷茫、感到挫折、需要一個方向建議嗎？</h5>
+                <h2>抽一張卡吧!</h2>
+                <p class="texeDialogueBobble">
+                    <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"/>
+                    </svg>
+                    </span>
+                    請點擊牌卡開始抽卡！
+                </p>
+                
+                <div class="drawcardContainer">
+                    <div class="cardcontainer">
+                        <div class="card1" style="--i:-4" tabindex="0">
+                            <img src="../assets/images/cardBack.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card1" style="--i:-3" tabindex="0">
+                            <img src="../assets/images/cardBack.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card1" style="--i:-2" tabindex="0">
+                            <img src="../assets/images/" alt="">
+                        </div>
+                        <div class="card1" style="--i:-1" tabindex="0">
+                            <img src="../assets/images/cardBack.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card1" style="--i:-0" tabindex="0">
+                            <img src="../assets/images/cardBack.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card1" style="--i:1" tabindex="0">
+                            <img src="../assets/images/cardBack.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card1" style="--i:2" tabindex="0">
+                            <img src="../assets/images/cardBack.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card1" style="--i:3" tabindex="0">
+                            <img src="../assets/images/cardBack.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card1" style="--i:4" tabindex="0">
+                            <img src="../assets/images/cardBack.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <span class="starsSmall">
+                        <img src="../assets/images/StarsSmall.png" alt="decoratedStars">
+                    </span>
+                    <span class="starSingle">
+                        <img src="../assets/images/Star.png" alt="decoratedStar">
+                    </span>
+                    <span class="cheerupBoy">
+                        <img src="../assets/images/cheerupBoy.png" alt="cheerupBoy">
+                    </span>
+                    <span class="cheerupGirl">
+                        <img src="../assets/images/cheerupGirl.png" alt="cheerupGirl">
+                    </span>
+                    <button class="btnDecide" type="button">確定抽卡</button>
+                </div>
+            </section>
+
+            <section class="drawcardAns">
+                <h5>快來看看今日專屬於你的牌卡吧！</h5>
+                <h2 class="textCardResult">抽卡結果</h2>
+                <div class="drawcardDetail">
+                    <span>
+                        <img class="starssixpointedSmall" src="../assets/images/starsSixPointedS.png" alt="">
+                    </span>
+                    <div class="cardResult">
+                        <div class="space"></div>
+                        <img class="cardResultPic" src="../assets/images/cardResult.png" alt="">
+                    </div>
+                    <div class="cardResultText">
+                        <h2 class="cradName">閃耀之星</h2>
+                        <p class="resultUP">今天的你是自己的光芒所在。這一天，你將帶著自信和力量走過每一刻，你的存在會為周圍的人帶來啟發和溫暖。</p>
+                        <p class="resultDown">今天的你，不需要尋找外界的認可，因為你內心的星光已經足夠指引你。記住，你就是那顆閃耀的星，無論今天遇到什麼挑戰，你都會用你的光芒照亮前行的路。</p>
+                        <button class="btnSave">保存紀錄</button>
+                    </div>
+                </div>
+                <div class="illustrations">
+                    <img class="heroBoy" src="../assets/images/heroBoy.png" alt="角色1">
+                    <img class="heroGirl" src="../assets/images/heroGirl.png" alt="角色2">
+                </div>
+            </section>
+        </div>
+    </div>
+   
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

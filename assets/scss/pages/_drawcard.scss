@@ -1,0 +1,238 @@
+.contentContainer {
+    background-color: #ffffff;
+    border-bottom-right-radius: 128px;
+    border-bottom-left-radius: 128px;
+    padding-bottom: 80px;
+}
+
+.mainContainer {
+    max-width: 1760px; //max-width
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titleDailyCard {
+    margin-top: 180px;
+}
+
+.drawcardAnimation {
+    margin-top: 64px;
+    height: 1050px;
+    background-color: #FFF3ED;
+    border-radius: 64px;
+    position: relative;
+}
+
+.cheerupBoy {
+    position: absolute;
+    right: 318px;
+    bottom: -35px;
+}
+
+.cheerupGirl {
+    position: absolute;
+    left: 318px;
+    bottom: -35px;
+}
+
+.drawcardAnimation h5 {
+    padding-top: 80px;
+}
+
+.drawcardAnimation h2 {
+    margin-top: 24px;
+    color: #EA5446;
+}
+
+.texeDialogueBobble {
+    width: 259px;
+    border-radius: 100px;
+    padding: 14.5px 16px;
+    background-color: #FFE1D5;
+    margin: 102px auto 0
+}
+
+.bi-1-circle-fill {
+    color: #EA5446;
+}
+
+.drawcardContainer {
+    margin-top: 100px;
+    /* background-color: grey; */
+    position: relative;
+}
+
+.starsSmall {
+    position: absolute;
+    transform: rotate(180deg);
+    top: 20px;
+    left: 600px;
+}
+
+.starSingle {
+    position: absolute;
+    transform: rotate(45deg);
+    bottom: 90px;
+    right: 650px;
+}
+
+.btnDecide {
+    background-color: #ffc2a8;
+    padding: 16px 40px;
+    border-radius: 64px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    border: 0px solid;
+    margin-top: 500px;
+    opacity: 0;
+    z-index: 500;
+    cursor: pointer;
+}
+
+/* 卡片散開 */
+.cardcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cardcontainer .card1 {
+    // background-color: #FFF3ED;
+    position: absolute;
+    top: 0;
+    box-shadow: none;
+    transition: 0.5s;
+    transform-origin: 50% 80%;
+    border-style: none;
+}
+
+/* 被寫進JS裡面，因為無法解決active維持的效果*/
+/* .cardcontainer.active .card{
+    transform: rotate(calc(var(--i) * 5deg))
+        translate(calc(var(--i) * 120px), -70px);
+    color: rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    } */
+
+/* 卡片點擊 */
+.cardcontainer .card1:focus {
+    translate: calc(var(--i) * 20px) -50px;
+}
+
+/* 裝飾消失 */
+.cardcontainer.expanded~.starsSmall,
+.cardcontainer.expanded~.starSingle,
+.cardcontainer.expanded~.cheerupBoy,
+.cardcontainer.expanded~.cheerupGirl {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* 按鈕出現 */
+.cardcontainer.expanded~.btnDecide {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    z-index: 500;
+}
+
+/* Z-index:9999 */
+/* 抽卡結果Section */
+
+.drawcardAns {
+    background-color: #FFF5E3;
+    height: 1050px;
+    border-radius: 64px;
+    display: none;
+
+}
+
+.drawcardDetail {
+    margin: 180px auto 0;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    gap: 80px;
+    padding: 48px;
+    width: 960px;
+    background-color: #FFE5BF;
+    border-radius: 48px;
+    position: relative;
+
+}
+
+.cardResultPic {
+    position: absolute;
+    top: -170px;
+    left: 0;
+}
+
+.cardResult .space {
+    width: 280px;
+}
+
+.drawcardAns h5 {
+    padding-top: 80px;
+}
+
+.drawcardAns .textCardResult {
+    margin-top: 24px;
+    color: #EA5446;
+}
+
+.cardResultText {
+    line-height: 24px;
+}
+
+.cardResultText .cardName {
+    font-weight: 900px;
+}
+
+.cardResultText .resultUP {
+    margin-top: 24px;
+}
+
+.cardResultText .resultDown {
+    margin-top: 16px;
+}
+
+.btnSave {
+    margin-top: 48px;
+    background-color: #EA5446;
+    border-radius: 100px;
+    padding: 16px 40px;
+    color: #FFFFFF;
+    border: 0 solid;
+    cursor: pointer;
+}
+
+.illustrations {
+
+    position: relative;
+
+    .heroBoy {
+        position: absolute;
+        left: 300px;
+    }
+
+    .heroGirl {
+        position: absolute;
+        right: 300px;
+    }
+}
+
+.starssixpointedSmall {
+    position: absolute;
+    bottom: 50px;
+    ;
+    left: -30px;
+    z-index: 999;
+}
+
+.starssixpointedLarge {
+    position: absolute;
+    top: 530px;
+    right: 1330px;
+    z-index: 999;
+}

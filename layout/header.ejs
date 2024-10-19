@@ -1,60 +1,251 @@
-<header class="header">
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-neutral-50 border-bottom border-primary-300 py-3 py-lg-4">
-      <div class="container-fluid px-lg-10">
-          <a class="navbar-brand navbar-brand-size me-auto" href="index.html">
-              <img src="../assets/images/Logo.svg" alt="logo" >
-          </a>
-          <!-- 分頁及Offcanvas -->
-          <!-- Offcanvas的btn-close hover顏色無法改 -->
-          <div class="offcanvas offcanvas-top" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-              <div class="offcanvas-header border-bottom border-primary-300">
-                  <a class="navbar-brand navbar-brand-size " href="#">
-                      <img src="../assets/images/Logo.svg" alt="logo" >
-                  </a>
-                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body navOffcanvas ms-lg-auto">
-                  <ul class="navbar-nav gap-11 mb-lg-0 gap-lg-5 ">
-                      <li class="nav-item">
-                          <a class="nav-link title-S-CH px-3 py-2" aria-current="page" href="#">每日一卡</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link title-S-CH px-3 py-2"  href="introduction.html">卡組介紹</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link title-S-CH px-3 py-2"  href="#">商城</a>
-                      </li>
-                  </ul>
-              </div>  
-          </div>
-          <!-- 會員及購物車icon -->
-          <div class="d-flex gap-11 ms-lg-10">
-              <ul class="navbar-nav flex-row navIcon gap-11">
-                  <li class="nav-item">
-                      <a class="nav-link" aria-current="user" href="#">
-                          <i class="bi bi-person text-neutral-800 navIconBtn"></i>
-                      </a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" aria-current="cart" href="#">
-                          <i class="bi bi-cart3 text-neutral-800 navIconBtn"></i>
-                      </a>
-                  </li>
-              </ul>
-              <!-- 漢堡選單本體 -->
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-          </div>
-      </div>
-  </nav>
+<header class="header"></header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-neutral-50 border-bottom border-primary-300 py-3 py-lg-4">
+        <div class="container-fluid px-lg-10">
+            <a class="navbar-brand navbar-brand-size me-auto" href="index.html">
+                <img src="../assets/images/Logo.svg" alt="logo" >
+            </a>
 
-  <!-- 至頂按鈕 -->
-    <div class="container-fluid">
-        <a class="btn btn-outline-primary-500 toTopBtn border-2 rounded-pill p-2 p-lg-3" href="#" role="button" tabindex="0">
-          <img src="../assets/images/Arrow.svg" alt="toTopArrow" class="d-block toTopArrow"> 
-        </a>
+            <!-- 分頁及Offcanvas -->
+            <!-- Offcanvas的btn-close hover顏色無法改 -->
+            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                <div class="offcanvas-header border-bottom border-primary-300">
+                    <a class="navbar-brand navbar-brand-size " href="#">
+                        <img src="../assets/images/Logo.svg" alt="logo" >
+                    </a>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body navOffcanvas ms-lg-auto">
+                    <ul class="navbar-nav gap-11 mb-lg-0 gap-lg-5 ">
+                        <li class="nav-item">
+                            <a class="nav-link title-S-CH px-3 py-2" aria-current="page" href="drawcard.html">每日一卡</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link title-S-CH px-3 py-2"  href="introduction.html">卡組介紹</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link title-S-CH px-3 py-2"  href="#">商城</a>
+                        </li>
+                    </ul>
+                </div>  
+            </div>
 
+
+            <!-- 會員及購物車icon -->
+            <div class="d-flex gap-11 ms-lg-10">
+                <ul class="navbar-nav flex-row navIcon gap-11">
+                    <li class="nav-item">
+                        <div class="dropdown ">
+                            <a class="nav-link" aria-current="user" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-bs-offset="10,20" justify-content-center>
+                                <i class="bi bi-person navIconBtn"></i>
+                            </a>
+                            
+                            <ul class="dropdown-menu userDropdown position-absolute start-50 translate-middle-x p-11" aria-labelledby="dropdownMenuLink">
+                                <!-- 未登入 -->
+                                <!-- <li><a class="dropdown-item dropdownFont mb-11" href="#">登入</a></li>
+                                <li><a class="dropdown-item dropdownFont" href="#">註冊</a></li>
+                                <img src="../assets/images/tip.svg" alt="" class="dropdown-arrow"> -->
+                                
+                                <!-- 已登入 -->
+                                <li>
+                                    <a class="dropdown-item dropdownFont mb-11" href="#">帳戶設定</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item dropdownFont" href="#">抽卡紀錄</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item dropdownFont mb-11" href="#">我的訂單</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item dropdownFont mb-11" href="#">我的評論</a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li class="d-flex px-3 pb-11">
+                                    <i class="bi bi-box-arrow-right "></i>
+                                    <a class="dropdown-item ms-1 ps-0" href="#">登出</a>
+                                </li>
+
+                                <img src="../assets/images/tip.svg" alt="" class="dropdown-arrow">
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"  aria-current="cart" href="#offcanvasCart" role="button" aria-controls="offcanvasCart">
+                            <i class="bi bi-cart3 navIconBtn"></i>
+                            <span class="position-absolute top-0 start-80 translate-middle-x badge cartBadge bg-primary-500 rounded-pill">99+</span>
+                        </a>
+                    </li>
+                </ul>
+
+
+                <!-- 漢堡選單本體 -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 購物車清單 -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header py-5">
+            <h5 id="offcanvasRightLabel" class="offcanvasTitle">購物車</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body px-2">
+            <div class="cartItem d-flex position-relative">
+                <img src="../assets/images/心電感應牌卡-包裝.jpg" alt="" class="cartItemImage me-2">
+                <div class="cartItemContent">
+                    <div class="cartItemTitle title-S-EN mb-2">心電感應牌卡</div>
+                    <div class="cartItemPrice body-M">
+                        <span>NT$ 999</span>
+                        <span>X</span>
+                        <span>1</span>
+                    </div>
+                </div>
+                <a class="ms-auto position-absolute top-50 end-0 translate-middle-y" role="button">
+                    <i class="bi bi-trash cartItemIcon"></i>
+                    <span class="visually-hidden">刪除</span>
+                </a>
+            </div>
+
+            <div class="cartItem d-flex position-relative">
+                <img src="../assets/images/舒眠薰衣.jpg" alt="" class="cartItemImage me-2">
+                <div class="cartItemContent">
+                    <div class="cartItemTitle title-S-EN mb-2">香氛-舒眠薰衣</div>
+                    <div class="cartItemPrice body-M">
+                        <span>NT$ 800</span>
+                        <span>X</span>
+                        <span>2</span>
+                    </div>
+                </div>
+                <a class="ms-auto position-absolute top-50 end-0 translate-middle-y" role="button">
+                    <i class="bi bi-trash cartItemIcon"></i>
+                    <span class="visually-hidden">刪除</span>
+                </a>
+            </div>
+
+            <div class="cartItem d-flex position-relative">
+                <img src="../assets/images/柑橘晨曦.jpg" alt="" class="cartItemImage me-2">
+                <div class="cartItemContent">
+                    <div class="cartItemTitle title-S-EN mb-2">香氛-柑橘晨曦</div>
+                    <div class="cartItemPrice body-M">
+                        <span>NT$ 780</span>
+                        <span>X</span>
+                        <span>1</span>
+                    </div>
+                </div>
+                <a class="ms-auto position-absolute top-50 end-0 translate-middle-y" role="button">
+                    <i class="bi bi-trash cartItemIcon"></i>
+                    <span class="visually-hidden">刪除</span>
+                </a>
+            </div>
+
+            <div class="cartItem d-flex position-relative">
+                <img src="../assets/images/韋特塔羅牌-包裝.jpg" alt="" class="cartItemImage me-2">
+                <div class="cartItemContent">
+                    <div class="cartItemTitle title-S-EN mb-2">韋特塔羅牌</div>
+                    <div class="cartItemPrice body-M">
+                        <span>NT$ 890</span>
+                        <span>X</span>
+                        <span>1</span>
+                    </div>
+                </div>
+                <a class="ms-auto position-absolute top-50 end-0 translate-middle-y" role="button">
+                    <i class="bi bi-trash cartItemIcon"></i>
+                    <span class="visually-hidden">刪除</span>
+                </a>
+            </div>
+
+            <div class="cartItem d-flex position-relative">
+                <img src="../assets/images/The Phantomwise Tarot-包裝.jpg" alt="" class="cartItemImage me-2">
+                <div class="cartItemContent">
+                    <div class="cartItemTitle title-S-EN mb-2">The Phantomewise Tarot</div>
+                    <div class="cartItemPrice body-M">
+                        <span>NT$ 850</span>
+                        <span>X</span>
+                        <span>1</span>
+                    </div>
+                </div>
+                <a class="ms-auto position-absolute top-50 end-0 translate-middle-y" role="button">
+                    <i class="bi bi-trash cartItemIcon"></i>
+                    <span class="visually-hidden">刪除</span>
+                </a>
+            </div>
+
+            <div class="cartItem d-flex position-relative">
+                <img src="../assets/images/晨光薄荷.jpg" alt="" class="cartItemImage me-2">
+                <div class="cartItemContent">
+                    <div class="cartItemTitle title-S-EN mb-2">香氛-晨光薄荷</div>
+                    <div class="cartItemPrice body-M">
+                        <span>NT$ 850</span>
+                        <span>X</span>
+                        <span>1</span>
+                    </div>
+                </div>
+                <a class="ms-auto position-absolute top-50 end-0 translate-middle-y" role="button">
+                    <i class="bi bi-trash cartItemIcon"></i>
+                    <span class="visually-hidden">刪除</span>
+                </a>
+            </div>
+
+            <div class="cartItem d-flex position-relative">
+                <img src="../assets/images/森林深處.jpg" alt="" class="cartItemImage me-2">
+                <div class="cartItemContent">
+                    <div class="cartItemTitle title-S-EN mb-2">香氛-森林深處</div>
+                    <div class="cartItemPrice body-M">
+                        <span>NT$ 850</span>
+                        <span>X</span>
+                        <span>1</span>
+                    </div>
+                </div>
+                <a class="ms-auto position-absolute top-50 end-0 translate-middle-y" role="button">
+                    <i class="bi bi-trash cartItemIcon"></i>
+                    <span class="visually-hidden">刪除</span>
+                </a>
+            </div>
+
+            <div class="cartItem d-flex position-relative">
+                <img src="../assets/images/木樽之夜.jpg" alt="" class="cartItemImage me-2">
+                <div class="cartItemContent">
+                    <div class="cartItemTitle title-S-EN mb-2">香氛-木樽之夜</div>
+                    <div class="cartItemPrice body-M">
+                        <span>NT$ 850</span>
+                        <span>X</span>
+                        <span>1</span>
+                    </div>
+                </div>
+                <a class="ms-auto position-absolute top-50 end-0 translate-middle-y" role="button">
+                    <i class="bi bi-trash cartItemIcon"></i>
+                    <span class="visually-hidden">刪除</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 結帳按鈕 -->
+        <div class="cartCheckout p-3">
+            <a class="btn btn-primary-500 text-white rounded-pill d-block py-3" href="#" role="button">
+                訂單結帳
+            </a>
+        </div>
     </div>
 
+    <!-- 至頂按鈕 -->
+    <div class="container-fluid">
+        <a class="btn btn-outline-primary-500 toTopBtn border-2 rounded-pill p-2 p-lg-3" href="#" role="button" tabindex="0">
+        <img src="../assets/images/Arrow.svg" alt="toTopArrow" class="d-block toTopArrow"> 
+        </a>
+    </div>
+      
 </header>
+
+
+<!-- 警報Alerts開始 -->
+                <!-- <div class="alert alert-success d-flex align-items-center" role="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                      </svg>
+                    <div>
+                        已從購物車中移除商品
+                    </div>
+                </div> -->
+<!-- 警報Alerts結束 -->
