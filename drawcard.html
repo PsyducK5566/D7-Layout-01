@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>drawCard</title>
+    <script type="module" crossorigin src="/D7-Layout-01/assets/main-b5e7940b.js"></script>
+    <link rel="stylesheet" href="/D7-Layout-01/assets/main-f80ce7f2.css">
+  </head>
+  <body>
+    <header class="header"></header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-neutral-50 border-bottom border-primary-300 py-3 py-lg-4">
+        <div class="container-fluid px-lg-10">
+            <a class="navbar-brand navbar-brand-size me-auto" href="index.html">
+                <img src="/D7-Layout-01/assets/Logo-ba8f05dc.svg" alt="logo" >
+            </a>
+
+            <!-- 分頁及Offcanvas -->
+            <!-- Offcanvas的btn-close hover顏色無法改 -->
+            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                <div class="offcanvas-header border-bottom border-primary-300">
+                    <a class="navbar-brand navbar-brand-size " href="#">
+                        <img src="/D7-Layout-01/assets/Logo-ba8f05dc.svg" alt="logo" >
+                    </a>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body navOffcanvas ms-lg-auto">
+                    <ul class="navbar-nav gap-11 mb-lg-0 gap-lg-5 ">
+                        <li class="nav-item">
+                            <a class="nav-link title-S-CH px-3 py-2" aria-current="page" href="drawcard.html">每日一卡</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link title-S-CH px-3 py-2"  href="introduction.html">卡組介紹</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link title-S-CH px-3 py-2"  href="#">商城</a>
+                        </li>
+                    </ul>
+                </div>  
+            </div>
+
+
+            <!-- 會員及購物車icon -->
+            <div class="d-flex gap-11 ms-lg-10">
+                <ul class="navbar-nav flex-row navIcon gap-11">
+                    <li class="nav-item">
+                        <div class="dropdown ">
+                            <a class="nav-link" aria-current="user" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-bs-offset="10,20" justify-content-center>
+                                <i class="bi bi-person navIconBtn"></i>
+                            </a>
+                            
+                            <ul class="dropdown-menu userDropdown position-absolute start-50 translate-middle-x p-11" aria-labelledby="dropdownMenuLink">
+                                <!-- 未登入 -->
+                                <!-- <li><a class="dropdown-item dropdownFont mb-11" href="#">登入</a></li>
+                                <li><a class="dropdown-item dropdownFont" href="#">註冊</a></li>
+                                <img src="../assets/images/tip.svg" alt="" class="dropdown-arrow"> -->
+                                
+                                <!-- 已登入 -->
+                                <li>
+                                    <a class="dropdown-item dropdownFont mb-11" href="#">帳戶設定</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item dropdownFont" href="#">抽卡紀錄</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item dropdownFont mb-11" href="#">我的訂單</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item dropdownFont mb-11" href="#">我的評論</a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li class="d-flex px-3 pb-11">
+                                    <i class="bi bi-box-arrow-right "></i>
+                                    <a class="dropdown-item ms-1 ps-0" href="#">登出</a>
+                                </li>
+
+                                <img src="/D7-Layout-01/assets/tip-c4c3c8b6.svg" alt="" class="dropdown-arrow">
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"  aria-current="cart" href="#offcanvasCart" role="button" aria-controls="offcanvasCart">
+                            <i class="bi bi-cart3 navIconBtn"></i>
+                            <span class="position-absolute top-0 start-80 translate-middle-x badge cartBadge bg-primary-500 rounded-pill">99+</span>
+                        </a>
+                    </li>
+                </ul>
+
+
+                <!-- 漢堡選單本體 -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 購物車清單 -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header py-5">
+            <h5 id="offcanvasRightLabel" class="offcanvasTitle">購物車</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body px-2">
+            <div class="cartItem d-flex position-relative">
+                <img src="/D7-Layout-01/assets/心電感應牌卡-包裝-18365e7d.jpg" alt="" class="cartItemImage me-2">
+                <div class="cartItemContent">
+                    <div class="cartItemTitle title-S-EN mb-2">心電感應牌卡</div>
+                    <div class="cartItemPrice body-M">
+                        <span>NT$ 999</span>
+                        <span>X</span>
+                        <span>1</span>
+                    </div>
+                </div>
+                <a class="ms-auto position-absolute top-50 end-0 translate-middle-y" role="button">
+                    <i class="bi bi-trash cartItemIcon"></i>
+                    <span class="visually-hidden">刪除</span>
+                </a>
+            </div>
+
+            <div class="cartItem d-flex position-relative">
+                <img src="/D7-Layout-01/assets/舒眠薰衣-40ea08f8.jpg" alt="" class="cartItemImage me-2">
+                <div class="cartItemContent">
+                    <div class="cartItemTitle title-S-EN mb-2">香氛-舒眠薰衣</div>
+                    <div class="cartItemPrice body-M">
+                        <span>NT$ 800</span>
+                        <span>X</span>
+                        <span>2</span>
+                    </div>
+                </div>
+                <a class="ms-auto position-absolute top-50 end-0 translate-middle-y" role="button">
+                    <i class="bi bi-trash cartItemIcon"></i>
+                    <span class="visually-hidden">刪除</span>
+                </a>
+            </div>
+
+            <div class="cartItem d-flex position-relative">
+                <img src="/D7-Layout-01/assets/柑橘晨曦-d2a737e6.jpg" alt="" class="cartItemImage me-2">
+                <div class="cartItemContent">
+                    <div class="cartItemTitle title-S-EN mb-2">香氛-柑橘晨曦</div>
+                    <div class="cartItemPrice body-M">
+                        <span>NT$ 780</span>
+                        <span>X</span>
+                        <span>1</span>
+                    </div>
+                </div>
+                <a class="ms-auto position-absolute top-50 end-0 translate-middle-y" role="button">
+                    <i class="bi bi-trash cartItemIcon"></i>
+                    <span class="visually-hidden">刪除</span>
+                </a>
+            </div>
+
+            <div class="cartItem d-flex position-relative">
+                <img src="/D7-Layout-01/assets/韋特塔羅牌-包裝-caec9c72.jpg" alt="" class="cartItemImage me-2">
+                <div class="cartItemContent">
+                    <div class="cartItemTitle title-S-EN mb-2">韋特塔羅牌</div>
+                    <div class="cartItemPrice body-M">
+                        <span>NT$ 890</span>
+                        <span>X</span>
+                        <span>1</span>
+                    </div>
+                </div>
+                <a class="ms-auto position-absolute top-50 end-0 translate-middle-y" role="button">
+                    <i class="bi bi-trash cartItemIcon"></i>
+                    <span class="visually-hidden">刪除</span>
+                </a>
+            </div>
+
+            <div class="cartItem d-flex position-relative">
+                <img src="/D7-Layout-01/assets/The Phantomwise Tarot-包裝-ce22a036.jpg" alt="" class="cartItemImage me-2">
+                <div class="cartItemContent">
+                    <div class="cartItemTitle title-S-EN mb-2">The Phantomewise Tarot</div>
+                    <div class="cartItemPrice body-M">
+                        <span>NT$ 850</span>
+                        <span>X</span>
+                        <span>1</span>
+                    </div>
+                </div>
+                <a class="ms-auto position-absolute top-50 end-0 translate-middle-y" role="button">
+                    <i class="bi bi-trash cartItemIcon"></i>
+                    <span class="visually-hidden">刪除</span>
+                </a>
+            </div>
+
+            <div class="cartItem d-flex position-relative">
+                <img src="/D7-Layout-01/assets/晨光薄荷-ec07ce38.jpg" alt="" class="cartItemImage me-2">
+                <div class="cartItemContent">
+                    <div class="cartItemTitle title-S-EN mb-2">香氛-晨光薄荷</div>
+                    <div class="cartItemPrice body-M">
+                        <span>NT$ 850</span>
+                        <span>X</span>
+                        <span>1</span>
+                    </div>
+                </div>
+                <a class="ms-auto position-absolute top-50 end-0 translate-middle-y" role="button">
+                    <i class="bi bi-trash cartItemIcon"></i>
+                    <span class="visually-hidden">刪除</span>
+                </a>
+            </div>
+
+            <div class="cartItem d-flex position-relative">
+                <img src="/D7-Layout-01/assets/森林深處-7e89a7d6.jpg" alt="" class="cartItemImage me-2">
+                <div class="cartItemContent">
+                    <div class="cartItemTitle title-S-EN mb-2">香氛-森林深處</div>
+                    <div class="cartItemPrice body-M">
+                        <span>NT$ 850</span>
+                        <span>X</span>
+                        <span>1</span>
+                    </div>
+                </div>
+                <a class="ms-auto position-absolute top-50 end-0 translate-middle-y" role="button">
+                    <i class="bi bi-trash cartItemIcon"></i>
+                    <span class="visually-hidden">刪除</span>
+                </a>
+            </div>
+
+            <div class="cartItem d-flex position-relative">
+                <img src="/D7-Layout-01/assets/木樽之夜-fbc6e0a7.jpg" alt="" class="cartItemImage me-2">
+                <div class="cartItemContent">
+                    <div class="cartItemTitle title-S-EN mb-2">香氛-木樽之夜</div>
+                    <div class="cartItemPrice body-M">
+                        <span>NT$ 850</span>
+                        <span>X</span>
+                        <span>1</span>
+                    </div>
+                </div>
+                <a class="ms-auto position-absolute top-50 end-0 translate-middle-y" role="button">
+                    <i class="bi bi-trash cartItemIcon"></i>
+                    <span class="visually-hidden">刪除</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 結帳按鈕 -->
+        <div class="cartCheckout p-3">
+            <a class="btn btn-primary-500 text-white rounded-pill d-block py-3" href="#" role="button">
+                訂單結帳
+            </a>
+        </div>
+    </div>
+
+    <!-- 至頂按鈕 -->
+    <div class="container-fluid">
+        <a class="btn btn-outline-primary-500 toTopBtn border-2 rounded-pill p-2 p-lg-3" href="#" role="button" tabindex="0">
+        <img src="/D7-Layout-01/assets/Arrow-2601937e.svg" alt="toTopArrow" class="d-block toTopArrow"> 
+        </a>
+    </div>
+      
+</header>
+
+
+<!-- 警報Alerts開始 -->
+                <!-- <div class="alert alert-success d-flex align-items-center" role="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                      </svg>
+                    <div>
+                        已從購物車中移除商品
+                    </div>
+                </div> -->
+<!-- 警報Alerts結束 -->    <div class="contentContainer">
+        <div class="mainContainer">
+            <section class="titleDailyCard">
+                <h1 class="textDailyCard">
+                    <span class="mr-15"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIySURBVHgBvZfRThNBFIb/M9PClUm9gKSJF/UN+gaskRLuXKUk3LE8gbyB5QmEJ7DemdiYeteIicsTiE9gvdCN9YYbTYDdOc7BtEJh2Z2h8CVNpjuTfjvnzDndBTxJ1ltR8qwVwROCB6P1VhNMn2WcwTyq9z7GcETBA8MqGI+JKYQHXmICB5MfIFqCB55inJc1k3C1AUecxT/XViS0tQsXKyaCI+47JkTTlzT4ORxxEicbQcOG+cnlGaq5lpaTWKXVTu4c0QvchjhpLwcE2sybJ0Jj1F55iVmKJcSK1KsSS7d/tJe3S6wr7lzf1x6HVdIiraE8u7/Tk52H/fgIrmIJrYbkjQJ4wIyhYd6pv9vvokgsMhv7JYKSWm1iBsgNMPh9qtB98Hb/cCKW/Om0akNJInIJpw829HyYpadbFUrn7e7+995bpiapU5W5qDKfHnePddWe2rMdezX8MticHjHwxX7iP+nJ7oUcfw2D2j09F2SE0E5s4oaILGN+rUn3F3qDeGruapKN1YZKTcfnBkRogD3ZWV5JFdbxL3vSWZoHo4FSyOHRT+v9wRDX31wxsnudmU8l5AeLvQ8BSlCqZdbfDIbEZuvaRbZes1RFKEnpP4kFeaBj3stdIF2qILxeYqGanXZw1gSmpRgu5rTGmYjvywm15XFpwu4Wjjg/+hBxf/paZnQMR5zFkmvb9L+Nv9t6PXDJrbf4H9SdjGwLhAdeYgUTj8cGKsZdYt+fotENXtr+AvFbwwIYx+vVAAAAAElFTkSuQmCC" alt="decStar"></span>
+                    每日一卡
+                    <span class="ml-15"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIySURBVHgBvZfRThNBFIb/M9PClUm9gKSJF/UN+gaskRLuXKUk3LE8gbyB5QmEJ7DemdiYeteIicsTiE9gvdCN9YYbTYDdOc7BtEJh2Z2h8CVNpjuTfjvnzDndBTxJ1ltR8qwVwROCB6P1VhNMn2WcwTyq9z7GcETBA8MqGI+JKYQHXmICB5MfIFqCB55inJc1k3C1AUecxT/XViS0tQsXKyaCI+47JkTTlzT4ORxxEicbQcOG+cnlGaq5lpaTWKXVTu4c0QvchjhpLwcE2sybJ0Jj1F55iVmKJcSK1KsSS7d/tJe3S6wr7lzf1x6HVdIiraE8u7/Tk52H/fgIrmIJrYbkjQJ4wIyhYd6pv9vvokgsMhv7JYKSWm1iBsgNMPh9qtB98Hb/cCKW/Om0akNJInIJpw829HyYpadbFUrn7e7+995bpiapU5W5qDKfHnePddWe2rMdezX8MticHjHwxX7iP+nJ7oUcfw2D2j09F2SE0E5s4oaILGN+rUn3F3qDeGruapKN1YZKTcfnBkRogD3ZWV5JFdbxL3vSWZoHo4FSyOHRT+v9wRDX31wxsnudmU8l5AeLvQ8BSlCqZdbfDIbEZuvaRbZes1RFKEnpP4kFeaBj3stdIF2qILxeYqGanXZw1gSmpRgu5rTGmYjvywm15XFpwu4Wjjg/+hBxf/paZnQMR5zFkmvb9L+Nv9t6PXDJrbf4H9SdjGwLhAdeYgUTj8cGKsZdYt+fotENXtr+AvFbwwIYx+vVAAAAAElFTkSuQmCC" alt="decStar"></span>
+                </h1>
+            </section>
+            <section class="drawcardAnimation">
+                <h5>覺得迷茫、感到挫折、需要一個方向建議嗎？</h5>
+                <h2>抽一張卡吧!</h2>
+                <p class="texeDialogueBobble">
+                    <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-1-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312V4.002Z"/>
+                    </svg>
+                    </span>
+                    請點擊牌卡開始抽卡！
+                </p>
+                
+                <div class="drawcardContainer">
+                    <div class="cardcontainer">
+                        <div class="card1" style="--i:-4" tabindex="0">
+                            <img src="/D7-Layout-01/assets/cardBack-f91d3d9b.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card1" style="--i:-3" tabindex="0">
+                            <img src="/D7-Layout-01/assets/cardBack-f91d3d9b.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card1" style="--i:-2" tabindex="0">
+                            <img src="/D7-Layout-01/assets/cardBack-f91d3d9b.png" alt="">
+                        </div>
+                        <div class="card1" style="--i:-1" tabindex="0">
+                            <img src="/D7-Layout-01/assets/cardBack-f91d3d9b.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card1" style="--i:-0" tabindex="0">
+                            <img src="/D7-Layout-01/assets/cardBack-f91d3d9b.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card1" style="--i:1" tabindex="0">
+                            <img src="/D7-Layout-01/assets/cardBack-f91d3d9b.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card1" style="--i:2" tabindex="0">
+                            <img src="/D7-Layout-01/assets/cardBack-f91d3d9b.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card1" style="--i:3" tabindex="0">
+                            <img src="/D7-Layout-01/assets/cardBack-f91d3d9b.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="card1" style="--i:4" tabindex="0">
+                            <img src="/D7-Layout-01/assets/cardBack-f91d3d9b.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <span class="starsSmall">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAABUCAYAAADOOxqZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATSSURBVHgB7ZxfchJBEMa7d8mzeALxMVVJJCcQb0BugBcQOIFwAhIvYDyByQmMJzAxWj6KJxBfFabtngVCCBtm/80Ou/urwoUNxOKrnm96umcCUFGRK/Rl1OZHA0qABzHQ4tS8j+DjWygBsUQC3/sEJSKySPT97C0gNKBERBKJvo2aoGBwdwefQwkwFikQiH3oPs+gBOC2N7BJt1jKNnhed+MbpuopHvcnUGBqqy/o9lQMua5fIF8J68vXYXjQ438HUGDWhhve8KOpH4QN2CaQ/g1et+j50oPhRj/4C0+19zTBFIIxzNQrHnZjKCChnkS3ZwO+mCeLBRbqUeOOLJT+EJ3DjIZFEuvRFAAPuwO+XEMUEDuckZ9CgahtfYdSH9icw/xJBLwEUtcck3dpwCyisI5jkifVeTH7e+32hCNmiAdvChUxYWwVSWBvGsNqdo3qGA/6hYqWxzBcltDP5VPEfpkEEsxEUvRHXwkuyzLEVjETaWHKe6oHJWT77Cbs8dpsqs5xP37uo+tQStZ5dA1TOtmlRbGRcSdlXu698zWiUzzq9WFHiFe+TQpiT5dgdgQrkSRwGkFrtyY8hI93YfliM5LWPYiTVP897AA2Rfrz8Ba1OMKcb0vZFOl3yP2B6/5kUSQKn/K50elyddOeSIusfTN1aXjqxbSD2BMJYbLl55JLOSlUPnlSOE0XZzzXRGKoTbfvProUUfZEIojwpak9H3oNcAB7Inn4BKLRnJt5A3LGweG2QmDmP/NOOG2u3SSZjO8z0tcDNeQmw4XtMkueC9wkv+2Cyy2X0pVhwTIvJduqJ/HU7n2BbJjoQp6iG34+5m/EneS1nMyHYOMH8fBFfMYm0+IC4BU3UfsmUWlWmUyKH2FfQXRYAGzxxNBa3gn7VouQIP28A54WdmvN3o5xE7TBRSTqDLAjkue9BJfQ4qhXeNS/MHl75iLR11EHksxq6SL+M4R/XBE97F+ZfsiCJ3luFNUIPnNLrBOn45OpSDqKXNjOLF3nw/hN1cxSAL2ckE3xeYok3kPqdZShtYnsIqmGUvJoQH5cg69OkjRUF2Ri3LpbCyt5i23Ef6Y8e+2n065KfbjN29kDyA28YP85gRRJNZLyF4iH2HT2GlImtUjKXSAxaT+9IbZKYuPWZdY9HLFAHcgTmcX2s2mZJxJpOc1TzrkQ4jkeJJvmHyO2J9HNqKfLH3kni3qYzYaQIZEjKdhrJDlQjlP8PfAqq2G2wFik+VZlOc4lWwLdaSBmHEWCeST5urLYAJfgpDHrKBKMPEmXX108d0vKqB6UFNNICmrHd7PYL34+0fdpUU9W4+DqBe8JRK3z9QVkhbJzPCNSMimmHWf7Ht2OpPDO0ei1+X9Mr0pp6WirtZbSAn3o8K/fBp+6CfOrCR52n4IFrIu0SqzzdMsPs2kfdVtggVzb3Po8XU09N+1a5EXuewFkCseDrvwRhrNIH1w9FJQxzmyY4KiSJDXzxDAOTu0qmR9ndU4o57beuCiUk/uTXBPK2U1cc6Eimnk2OL3TLTBzvAr5qZVEUnB7O6BQ48L+5jzKWrnGeZGCUoja1CKy9reb3I8kRp8eV+r+SUusIukB+KJ/es+fth3DSJGdEUkj/kTwQY7ehwzBioqKioqKioqKCrf4DwG1m474XHnMAAAAAElFTkSuQmCC" alt="decoratedStars">
+                    </span>
+                    <span class="starSingle">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHvSURBVHgBvZc/UgIxFMa/QKOVqxXlOnqALe2AzhJPIHR2egO5gXoC5ARq5ViJHVZu6YyjpKRz6WggfgkMw5+FTQL4zexsdvcNv7yXl/cC4KkoDKvRUXgOTwl4iNAIOXyYhyHKsZQtOCoHH+VQmhpX4CE/sEJx6qkID/mBxZTHjDxDH8JRzmAmlA5tMPcrVTjK3eMh0jL5EtsEm5CK1GQKXLeWm8cC9aXf1IpvKcrbGkbHYYm3mxUmQWE/CLq/yQs2BTYhVnigx0GG6QnhPcLbWBdMaIUL8kxoAXY61Z4X9oL3bpL0lxktLZkmtArXvErwk9Q5EX/LJrLABjY0lUhnboTNSPJ6Ymzv4y8ZT8Bm/fJo0DMNylrDdZXQ1RgD1PKFg6DKFxe8drB9aYauBb08k+CTg1163Oc9xPaUkNEmo8nlvJ1d4zDUoS6Z6iTg3eRnYDCgx/mevTyrR+Wx7jkBDbzTnhGYpBlknkA4AR2BhvUyKCaPwhmBcpWZ1dFn7P1rJlyhFXdkGRayahJm9gq1DDMbm4msmwTLn2Qp3OfwJNVA4IrevsFSTqdMk/U5dLBYaGT8Iw/hIKd+PM7Qxdor3HqxM9iIe3Lh3QDWIfYGm0KgTOEfSWdyxtbZCNhITIVbuHvrDx6ilTr+D637p+0PINaPotS6PuwAAAAASUVORK5CYII=" alt="decoratedStar">
+                    </span>
+                    <span class="cheerupBoy">
+                        <img src="/D7-Layout-01/assets/cheerupBoy-1f71ba20.png" alt="cheerupBoy">
+                    </span>
+                    <span class="cheerupGirl">
+                        <img src="/D7-Layout-01/assets/cheerupGirl-11efaef5.png" alt="cheerupGirl">
+                    </span>
+                    <button class="btnDecide" type="button">確定抽卡</button>
+                </div>
+            </section>
+
+            <section class="drawcardAns">
+                <h5>快來看看今日專屬於你的牌卡吧！</h5>
+                <h2 class="textCardResult">抽卡結果</h2>
+                <div class="drawcardDetail">
+                    <span>
+                        <img class="starssixpointedSmall" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAA/CAYAAABU6B73AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATzSURBVHgB3ZpRbttGEIZnlpJQtAXiG5S+gfwYOG6lE9Q+ge23xAlQ+QSWT2AVqI28RTlBegMpToI8WjcIewO+FChEidPZlRRJCSVyuVxq6e/BtmhS5A53Zv6ZXQRL0MeXN/zzGKK4je3XATiOAHs0AdCHuveOBp09cBx7hiDYn//VhHp0BY5jc0as0qGPLzrgMGUZQt7qij5dNMFRSjQE7LG7OBsv7BkC4UnCQR8a4zdgGWlsun9xrHONzRmR/OYJj23GC7q/OOPg/ABCvNO5T5musXrbG/rwqgUFQh+et1i7DECgnHH+7KA3yno9giX4oSjljKAIsSUNAOjJ9Nxa+wdSgId3+1m/pwY7A6XYkm+vDTngOOCDF3X5VZ5uOOUaNLDiGvT5uZ/x1NZMimt8twyEny6uOA584ac/3XiiiIegwY5ixBodun+VGuG/GqDGBiDsbj0ZqY9P9VzOBUPwU9AbGmyeRSr6LwyAkEWH/AmauGEImWoTirN5Jvgis0xGA0hGHCQzZ4sFdoJlLPKox0VxdrkxE2QBSXs2qMvAAvOBDCAPBKHG219HM2Wu4oprLMlrhBlDyIl7hjBBxFraYe1SeCwQvddNmavYMQQJH8pGQB8MMA6WSkVGKPuTe/xtTX6gJxDjsaGv62EQJBekpk+V2xv/+jCtN3lwPg/0FxY2PswqPD4O6/NKllrWSrlND5kvZa6iDLF8qzwwxOVgSX6OuLPUWA6WwD08+hsMqakqbqoKmCWLwZb9ZvOQo65IQg5fCpgAqkos3kIBCGz3Qjy8lYHmspIGmdS064okvjoEPrvtgajLJkkhFi6N+vhhW+WalcQooPoDHt2oYFkZqM+tv+u8rb+t4ZAbrFz/k/PLdUu4DxrDNf561wdNUvMCfZZZZdzjU3+H6jCEaHquMzsyJ0huk53x6VeVchekLivOTIWYllJQs2My6fAN/oDKkM1dckkmZZA4GjymYGqkHSvoLiweqZfkLgVUn0qid/nPU6gM36+yFVZNcLf5AdR2oSqxdJdCDKEKN7nyVEl4diCcFNOh8sYtqCzIrk1+MesaAqugPkMO6v8AxiPuuYTcUOJiTYRQn4zw2evA2BCzdUvywQXUQIkHSCF/GnHLMASPf//YCPCgF2671HxGiF2Iq/gtd9ACHjj7twigNglMmzNmOmIXQVJ2pA7vzqFgzIKlp/RDucQ8/S1gZggBv8EjIbch1O41qFKtsZ38M0JgfklNBtOb7PRVcxlivpW4BbogpzLCNh7d8noJFR7wTMg3I6aot2EUpYylc+6WH+DRX0N16JD7A4TGK1RFoW0IlTJF5kqT1Rxes6A5UAP/BjaKNGgh7XhT9AWVqitS5Ueo3vbPtV6aogOvfsJlvKxcsy0aSwFlAX3XSKsrWPCAN5Uu0E01gjz9aY8VIp7AjtEyhNobtSllEr1XgZBVn67cVXFDutAO0ZsR5J19f2xugKO71iIQ5kHOIDDYA2VK5hgxC5LRMkjKTBCLc06FQyiKiONFg+PFDnqg2WdEY7wIZtLvL+UOFZMZkIRckGaTb48XXGmCBTIbQu1mZReAn+r7asHYEvNds5dQMs5uBaH7l/1EveJN94vYGPIt7m4vnNY7Ze7XcNYQKl7M9musa5H/fkjVJnlwesOpEltIa/FiFlCLx/mdt2UVZ5XYgjwvzoZKvFnifzwD4fSHTxUqAAAAAElFTkSuQmCC" alt="">
+                    </span>
+                    <div class="cardResult">
+                        <div class="space"></div>
+                        <img class="cardResultPic" src="/D7-Layout-01/assets/cardResult-f56b8368.png" alt="">
+                    </div>
+                    <div class="cardResultText">
+                        <h2 class="cradName">閃耀之星</h2>
+                        <p class="resultUP">今天的你是自己的光芒所在。這一天，你將帶著自信和力量走過每一刻，你的存在會為周圍的人帶來啟發和溫暖。</p>
+                        <p class="resultDown">今天的你，不需要尋找外界的認可，因為你內心的星光已經足夠指引你。記住，你就是那顆閃耀的星，無論今天遇到什麼挑戰，你都會用你的光芒照亮前行的路。</p>
+                        <button class="btnSave">保存紀錄</button>
+                    </div>
+                </div>
+                <div class="illustrations">
+                    <img class="heroBoy" src="/D7-Layout-01/assets/heroBoy-35a0bcfe.png" alt="角色1">
+                    <img class="heroGirl" src="/D7-Layout-01/assets/heroGirl-e924d6fe.png" alt="角色2">
+                </div>
+            </section>
+        </div>
+    </div>
+   
+    <footer class="footer bg-primary-300 ">
+  <div class="bg-neutral-50 w-auto py-5 py-lg-7 rounded-bottom-pill"></div>
+  <div class="container-fluid px-lg-10">
+      <div class="text-center pt-7 pb-5 pt-lg-9 pb-lg-7">
+          <a class="mb-3 mb-lg-12" href="#">
+              <img src="/D7-Layout-01/assets/Logo-ba8f05dc.svg" alt="logo" class="footerBrandSize">
+          </a>
+          <div>
+              <ul class="d-flex justify-content-center align-items-center list-unstyled gap-1 gap-lg-0 mb-0 footerListColor">
+                  <li>
+                      <a href="#" class="footerListFontSize p-11 px-lg-3 py-lg-2">隱私權政策</a>
+                  </li>
+                  <li>
+                      <img src="/D7-Layout-01/assets/Star-6fc54e59.svg" alt="star" class="d-block" width="8px">
+                  </li>
+                  <li>
+                      <a href="#" class="footerListFontSize p-11 px-lg-3 py-lg-2">會員條款</a>
+                  </li>
+                  <li>
+                      <img src="/D7-Layout-01/assets/Star-6fc54e59.svg" alt="star" class="d-block" width="8px">
+                  </li>
+                  <li>
+                      <a href="#" class="footerListFontSize p-11 px-lg-3 py-lg-2">退換貨條款</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  <div class="border-top border-primary-400"></div>
+
+  <div class="container-fluid px-lg-10">
+      <div class="text-center py-5">
+          <ul class="d-flex flex-column flex-lg-row justify-content-lg-between list-unstyled text-primary-700 gap-3 mb-0">
+              <li class="footerCopyRightSize">
+                  五角占卜 &copy; 2024 All rights reserved.
+              </li>
+              <li class="footerCopyRightSize">
+                  *此網站僅供學習使用，不會作為商業用途
+              </li>
+          </ul>
+      </div>
+  </div>
+
+  
+
+</footer>
+    
+  </body>
+</html>
