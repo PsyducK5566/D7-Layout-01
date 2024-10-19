@@ -1,0 +1,42 @@
+.footerBrandSize {
+    width: 180px;
+    line-height: 0;
+    @include media-breakpoint-up(lg) {
+        width: 251px;
+
+    }
+}
+
+.footerListColor {
+    color: $neutral-800;
+
+    &:hover {
+        color: $primary-500;
+    }
+}
+
+.footerListFontSize {
+    //subtitle-CH
+    font-size: 0.875rem;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    @include media-breakpoint-up(lg) {
+        //title-S-CH
+        font-size: 1rem;
+        letter-spacing: 0.04em;
+        font-weight: 700;
+    }
+}
+
+.footerCopyRightSize {
+    //caption
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+    @include media-breakpoint-up(lg) {
+        //body-S
+        font-size: 0.875rem;
+        letter-spacing: 0.04em;
+        font-weight: 500;
+    }
+}

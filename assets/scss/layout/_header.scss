@@ -1,0 +1,50 @@
+.navbar-brand-size {
+    max-width: 124px;
+    line-height: 0;
+    @include media-breakpoint-up(lg) {
+        max-width: 148px;
+
+    }
+
+}
+
+.navIconBtn {
+    display: block;
+        font-size: 1.5rem;
+        line-height: 0;
+        padding: 0 8px;
+        @include media-breakpoint-up(lg) {
+            font-size: 1.75rem;
+            line-height: 0;
+            padding: 2px;
+        }
+}
+
+.navOffcanvas {
+    padding: 16px 24px 24px 24px;
+}
+
+.toTopBtn {
+    position: fixed;
+    bottom: 184px;
+    right: 12px;
+    z-index: 100;
+    @include media-breakpoint-up(lg) {
+        bottom: 159px;
+        right: 80px;
+    }
+
+    &:hover {
+        background: $primary-400;
+    }
+}
+
+.toTopArrow {
+    width: 1.25rem;
+    height: 1.25rem;
+    @include media-breakpoint-up(lg) {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+  
