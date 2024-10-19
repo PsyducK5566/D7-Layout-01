@@ -1,3 +1,6 @@
+// * {
+//     outline: blue 1px solid;
+// }
 .navbar-brand-size {
     max-width: 124px;
     line-height: 0;
@@ -10,27 +13,37 @@
 
 .navIconBtn {
     display: block;
-        font-size: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 0;
+    padding: 0 8px;
+    color: $neutral-800;
+    @include media-breakpoint-up(lg) {
+        font-size: 1.75rem;
         line-height: 0;
-        padding: 0 8px;
-        @include media-breakpoint-up(lg) {
-            font-size: 1.75rem;
-            line-height: 0;
-            padding: 2px;
-        }
+        padding: 2px;
+    }
+    &:hover {
+        color: $primary-500;
+        
+    }
+
 }
 
 .navOffcanvas {
     padding: 16px 24px 24px 24px;
 }
 
+.offcanvas.offcanvas-top {
+    height: 40vh;
+}
+
 .toTopBtn {
     position: fixed;
-    bottom: 184px;
+    bottom: 50px;
     right: 12px;
     z-index: 100;
     @include media-breakpoint-up(lg) {
-        bottom: 159px;
+        bottom: 80px;
         right: 80px;
     }
 
@@ -47,4 +60,112 @@
         height: 1.5rem;
     }
 }
+
+//會員下拉選單
+.userDropdown {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 12px rgba($color: #831710, $alpha: 0.15);
+    min-width: 148px;
+}
+
+.dropdown-menu-center {
+    position: absolute;
+    //right: auto;
+    left: 50%;
+    //-webkit-transform: translate(-50%, 0);
+    //-o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.dropdownFont {
+    //title-S-CH
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    color: $neutral-800;
+    padding: 8px 16px;
+
+    &:hover {
+        background: rgba($color: #fff, $alpha: 0);
+        color: $primary-500;
+    }
+}
+
+.dropdown-arrow {
+    position: absolute;
+    transform: translate(-50%, -100%);
+    //bottom: -12px;
+    top: 0;
+    //bottom: 0;
+    left: 50%;
+    z-index: 1001;
+}
+
+//購物車
+.cartBadge {
+    padding: 0 5px;
+    //caption
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.offcanvas.offcanvas-end {
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+        width: 420px;
+    }
+    
+}
+
+.offcanvas-body {
+    & > div:not(:last-child) {
+        border-bottom: $neutral-100 1px solid;
+        padding-bottom: 1.5rem;
+        //margin-bottom: 1.5rem;
+    }
+    & > div:not(:first-child) {
+        padding-top: 1.5rem;
+        //margin-top: 1.5rem;
+    }
+}
+
+.offcanvasTitle {
+    //heading-H6
+    letter-spacing: 0.04em;
+    font-weight: 900;
+    line-height: 1.2;
+    font-size: 1.25rem;
+    color: $neutral-800;
+    margin: 0;
+}
+
+.cartItem {
+    
+
+    &Image {
+        // max-width: 88px;
+        // height: 88px;
+        aspect-ratio: 1/1;
+        width: 88px;
+        border-radius: 16px;
+    }
+
+    &Icon {
+        display: block;
+        font-size: 1rem;
+        line-height: 0;
+        padding: 8px;
+        color: #9A9393;
+    
+        &:hover {
+            color: $primary-500;
+            
+        }
+    }
+}
+
   

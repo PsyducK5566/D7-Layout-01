@@ -10,7 +10,7 @@
 .footerListColor {
     color: $neutral-800;
 
-    &:hover {
+    & a:hover {
         color: $primary-500;
     }
 }
