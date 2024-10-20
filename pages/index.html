@@ -4,54 +4,341 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>index</title>
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <div class="container mt-20">
+    <div class="pageTop"></div>
+    
+    <section class="banner">
+      <div class="container-fluid my-5">
+        <div class="row">
+          <div class="col">            
+              <div class="image-wrapper">
+                <p class="image-slogan">循序著命運呼喚的方向</p>
+                <img
+                  src="../assets/images/heroLargeHead.png"
+                  class="image-a img-fluid"
+                  alt="翻開未来的序章"
+                />
+                <img
+                  src="../assets/images/heroBackgroundPattern.png"
+                  class="image-b img-fluid"
+                  alt="背景光芒"
+                />
+                <button class="hero-button mt-3 rounded-pill">每日一卡</button>
+              </div>
 
-      <h1 class="index-title py-1">我是首頁</h1>
-       
-  
-      <div class="card" style="width: 18rem">
-        <img src="../assets/images/cat.jpg" class="card-img-top" alt="cat" />
-        <div class="card-body">
-          <h5 class="card-title">卡片元件</h5>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-            nobis earum!
-          </p>
+              <div class="d-flex justify-content-between mt-4">
+                <img
+                  src="../assets/images/heroBoy.png"
+                  alt="Left Character"
+                  class="hero-image img-fluid"
+                />
+                <img
+                  src="../assets/images/heroGirl.png"
+                  alt="Right Character"
+                  class="hero-image img-fluid"
+                />
+              </div>           
+          </div>
         </div>
       </div>
-  
-      <!-- Modal 按鈕 -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        打開 modal
-      </button>
-  
-      <!-- Modal 元件 -->
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </section>
+
+    <section class="iWant">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="h1 text-center mb-10">
+              <span class="star">✦</span> 我想知道 <span class="star">✦</span>
             </div>
-            <div class="modal-body">內容</div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-              <button type="button" class="btn btn-primary">確定</button>
+            <div class="row justify-content-center">
+              <div class="col-md-3">
+                <div class="h-100 position-relative" style="top: -30px;">
+                  <img
+                  src="../assets/images/whoIAm.png"
+                  alt="whoIAm"
+                  class="img-fluid"
+                />
+              </div>
+                </div>
+                
+              <div class="col-md-3">
+                <img
+                  src="../assets/images/whereIAm.png"
+                  alt="whereIAm"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="col-md-3">
+                <div class="h-100 position-relative" style="top: -30px;">
+                  <img
+                  src="../assets/images/whereToGo.png"
+                  alt="whereToGo"
+                  class="img-fluid"
+                />
+              </div>
+                </div>
+                
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section class="guide">
+      <div class="container">
+        <div class="row mt-10">
+          <div class="col">
+            <div class="h1 text-center mb-10">
+              <span class="star">✦</span> 牌卡心靈指引
+              <span class="star">✦</span>
+            </div>
+            <p class="subtitle text-center">
+              引導做出適合的選擇。<br />相信自己的念，了解內心真實的自己
+            </p>
+          </div>
+        </div>
+
+        <div class="row d-flex justify-content-center mt-10">
+          <div class="col-md-3">
+            <div class="h-100 position-relative" style="top: -30px;">
+               <img
+              src="../assets/images/cardRelation.png"
+              alt="relation"
+              class="img-fluid"
+            />
+            </div>
+           
+          </div>
+          <div class="col-md-3">
+            <img
+              src="../assets/images/cardSelf.png"
+              alt="self"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-md-3">
+            <div class="h-100 position-relative" style="top: -30px;">
+              <img
+              src="../assets/images/cardChoice.png"
+              alt="choice"
+              class="img-fluid"
+            />
+          </div>
+            </div>            
+          <div class="col-md-3">
+            <img
+              src="../assets/images/cardMindfulness.png"
+              alt="mindfulness"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+        <div class="text-center m-10">
+          <button class="btn btn-customIndex">牌卡介紹</button>
+        </div>
+        
+      </div>
+      <div class="container m-8 y-5">
+        <div class="h1 text-center mb-10">
+          <span class="star">✦</span> 抽卡方式
+          <span class="star">✦</span>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-3 ">
+            <img
+              src="../assets/images/Step=01.png"
+              alt="靜心"
+              class="img-fluid mb-3"
+            />
+            <h4>靜心</h4>
+            <p>請靜下心來，深呼機三次，將自己回到作平靜的狀態</p>
+          </div>
+          <div class="col-md-3">
+            <img
+              src="../assets/images/Step=02.png"
+              alt="默念"
+              class="img-fluid mb-3"
+            />
+            <h4>默念</h4>
+            <p>請在心中默念一次占卜問題與選項</p>
+          </div>
+          <div class="col-md-3">
+            <img
+              src="../assets/images/Step=03.png"
+              alt="抽卡"
+              class="img-fluid mb-3"
+            />
+            <h4>抽卡</h4>
+            <p>請點選「抽卡」按鈕</p>
+          </div>
+          <div class="col-md-3">
+            <img
+              src="../assets/images/Step=04.png"
+              alt="解析"
+              class="img-fluid mb-3"
+            />
+            <h4>解析</h4>
+            <p>解析卡面了解現在</p>
+          </div>
+          <!-- <div class="col-md-2 d-none" id="extra-card">
+            <img
+              src="..//assets/images/Step=05.png"
+              alt="更多"
+              class="img-fluid mb-3"
+            />
+            <h4>更多</h4>
+            <p>更多資訊</p>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-primary" id="show-card-btn">→</button>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <section class="fragrance">
+      <div class="container my-10 text-center">
+        <div class="h1 text-center mb-10">
+          <span class="star">✦</span> 香氛能量指引
+          <span class="star">✦</span>
+        </div>
+              
+        <div class="mt-10">
+          <div class="row row-cols-md-2 justify-content-center">
+            <div class="col-12 mb-10 d-flex justify-content-center align-items-center">
+             
+                <img src="../assets/images/Union-1.png" class="img-fluid" alt="果香">
+                <div class="text-start mx-5">
+                <img src="../assets/images/果香.png" class="img-fluid">
+                  <p>清新果香味，<br>提神醒腦</p>
+                </div>
+            
+            </div>
+            <div class="col-12 mb-10 d-flex justify-content-center align-items-center">
+              
+                <img src="../assets/images/Union-2.png" class="img-fluid" alt="香草">
+                <div class="text-start mx-5">
+                  <img src="../assets/images/香草.png" class="img-fluid">
+                  <p>溫暖甜美，<br>舒緩心情</p>
+                </div>
+              
+            </div>
+            <div class="col-12 mb-10 d-flex justify-content-center align-items-center">
+              
+                <img src="../assets/images/Union-3.png" class="img-fluid" alt="花香">
+                <div class="text-start mx-5">
+                  <img src="../assets/images/花香.png" class="img-fluid">
+                  <p>柔和芬芳，<br>提升情緒</p>
+                </div>
+              
+            </div>
+            <div class="col-12 mb-10 d-flex justify-content-center align-items-center">
+              
+                <img src="../assets/images/Union-4.png" class="img-fluid" alt="木香">
+                <div class="text-start mx-5">
+                  <img src="../assets/images/木香.png" class="img-fluid">
+                  <p>自然沈穩，<br>放鬆身心</p>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="position-relative">
+          <img src="../assets/images/Union.png" class="img-fluid rounded-circle" alt="bg-union">
+          <div class="position-absolute top-50 start-50 translate-middle text-dark">
+            <p class="mt-4">每種香氛都是一則故事，<br>讓身心找回自然而癒的力量！</p>            
+          </div>
+        </div>        
+        <div class="row">
+          <div class="col">
+            <img src="../assets/images/Illustration Group.png" class="img-fluid" alt="Group">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="swiperArea">
+      <div class="container">
+        <div class="h1 text-center mb-10">
+          <span class="star">✦</span> 精選商品
+          <span class="star">✦</span>
+        </div>
+        
+        <div class="row row-cols-md-2 d-flex justify-content-center">
+          <div class="col-md-3">
+            <div class="text-center">
+              <img src="../assets/images/卡牌.png" class="img-fluid" alt="卡牌">
+            </div>
+            
+            <div class="swiper mx-5">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                <img src="../assets/images/IMG_6910.JPG" class="swiper-img" alt="圖片1"></div>
+                <div class="swiper-slide">
+                <img src="../assets/images/IMG_6912.JPG" class="swiper-img" alt="圖片2"></div>
+                <div class="swiper-slide">
+                <img src="../assets/images/IMG_6916.JPG" class="swiper-img" alt="圖片3"></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="text-center">
+              <img src="../assets/images/香氛.png" class="img-fluid" alt="香氛">
+            </div>            
+            <div class="swiper mx-5">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                <img src="../assets/images/IMG_7143.JPG" class="swiper-img" alt="圖片1"></div>
+                <div class="swiper-slide">
+                <img src="..//assets/images/IMG_7144.JPG" class="swiper-img" alt="圖片2"></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center m-10">
+          <button class="btn btn-customIndex">查看更多</button>
+        </div>
+
+      </div>
+    
+      
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+      slidesPerView: 1,
+      spaceBetween: 48,
+      loop:true,
+      pagination: {
+      el: '.swiper-pagination',
+      },
+      navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+      },
+  //  pagination: {
+  //       el: ".swiper-pagination",
+  //       type: "progressbar",
+  //     },
+    });
+    </script>
 
     <%- include('./layout/footer'); -%>
 
