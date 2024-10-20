@@ -1,0 +1,375 @@
+// * {
+//     outline: blue 1px solid;
+// }
+
+.pageTop {
+    margin-top: 84px;
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 136px;
+    }
+}
+
+//banner
+.carouselBannerImage {
+    display: block;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    border-radius: 2rem;
+    height: 320px;
+
+
+    @include media-breakpoint-up(lg) {
+        aspect-ratio: 11 / 3; 
+        border-radius: 3rem;
+        height: 480px;
+
+
+    }
+}
+
+.bannerBtnArrow {
+    &Left {
+        transform:rotate(180deg);
+        width: 44px;
+        padding: 12px;
+        background: rgba(48, 34, 32, 0.7);
+        border-radius: 50%;
+        backdrop-filter:blur(10px); 
+        -webkit-backdrop-filter:blur(10px);
+        //transform: translate(0,0);
+        //top: 18px;
+        //left: 50%;
+        //z-index: 0;
+        @include media-breakpoint-up(lg) {
+            //width: 56px;
+            //padding: 24px;
+    
+        }
+    }
+
+    &Right {
+        width: 44px;
+        padding: 12px;
+        background: rgba(48, 34, 32, 0.7);
+        border-radius: 50%;
+        backdrop-filter:blur(10px);  
+        }
+    }
+
+.background {
+    background-color: $primary-100;
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 64px;
+
+    @include media-breakpoint-up(lg) {
+        height: 298px;
+        border-top-left-radius: 128px;
+
+    }
+}    
+
+//特別活動
+.storeTitle {
+    margin-bottom: 1.5rem;
+    gap: 0.5rem;
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 3.5rem;
+        gap: 1rem;
+    }
+}
+
+.storeTitleFontSize {
+    //heading-H4
+    letter-spacing: 0.04em;
+    font-weight: 900;
+    line-height: 1.2;
+    font-size: 1.75rem;
+
+    @include media-breakpoint-up(lg) {
+        //heading-H1
+        font-size: 3rem;
+    }
+}
+
+.storeTitleStar {
+    width: 1rem;
+    @include media-breakpoint-up(lg) {
+        width: 1.75rem;
+    }
+}
+
+.eventBannerImage-1 {
+    background-image: url(../assets/images/活動\ Banner-療癒住所.jpg);
+    background-position: 50%;
+    background-size: cover;
+    max-width: 351px;
+    height: 120px;
+    border-radius: 20px;
+    @include media-breakpoint-up(lg) {
+        max-width: 864px;
+        //height: 240px;
+        border-radius: 40px;
+    }
+}
+
+.eventBannerImage-2 {
+    display: flex;
+    background-image: url(../assets/images/活動\ Banner-滿千免運.jpg);
+    background-position: 50%;
+    background-size: cover;
+    //max-width: 351px;
+    min-width: auto;
+    height: 120px;
+    border-radius: 20px;
+    @include media-breakpoint-up(lg) {
+        //max-width: 864px;
+        height: 240px;
+        border-radius: 40px;
+        
+    }
+}
+
+.storeBtnArrow {
+    width: 36px;
+    padding: 8px;
+    background: $neutral-50;
+    border-radius: 50%;
+
+    @include media-breakpoint-up(lg) {
+        width: 56px;
+        padding: 16px;
+    }
+    &:hover {
+        background: $primary-400;
+    }
+
+    &Position {
+        transform: translate(0,-50%);
+        top: 50%;
+        right: 16px;
+        
+        @include media-breakpoint-up(lg) {
+            right: 40px;
+        }
+    }
+}
+
+
+//測試
+.eventBannerImage {
+    aspect-ratio: 3 / 1; 
+    object-fit: cover;
+    object-position: left;
+    height: 120px;
+    border-radius: 20px;
+    @include media-breakpoint-up(md) {
+
+        height: 150px;
+        border-radius: 30px;
+    }
+    @include media-breakpoint-up(lg) {
+
+        height: 240px;
+        border-radius: 40px;
+    }
+}
+
+//商品列表
+.search {
+    width: 100%;
+    white-space: nowrap;
+    vertical-align: middle;
+
+    @include media-breakpoint-up(md) {
+        max-width: 280px;
+    }
+
+    &Bar {
+        width: 100%;
+        background: #F5F5F5;
+        border: none;
+        border-radius: 12px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 44px;
+        float: left;
+        //body-M
+        letter-spacing: 0.04em;
+        font-weight: 500;
+        font-size: 1rem;
+        color: #ABA6A5;
+        
+    }
+
+    &Icon {
+        display: block;
+        color: #ABA6A5;
+        transform: translate(0,-50%);
+        top: 50%;
+        left: 16px;
+
+        
+    }
+}
+
+.sortDropdown {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 12px rgba($color: #831710, $alpha: 0.15);
+    width: auto;
+    margin-top: 8px;
+}
+
+.tagBtn {
+    //subtitle-CH
+    font-size: 0.875rem;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    padding: 12px 20px;
+    color: $primary-500;
+    border-width: 2px;
+
+    @include media-breakpoint-up(md) {
+        //title-S-CH
+        font-size: 1rem;
+        letter-spacing: 0.04em;
+        font-weight: 700;
+        padding: 12px 28px;
+    }
+
+    &.active {
+        color: $primary-500;
+        background: $primary-300;
+    }
+
+    &:hover {
+        color: #fff;
+    }
+
+
+    
+    &:not(:last-child) {
+        margin-right: 0.5rem;
+    }
+}
+
+//商品
+.productImage {
+    display: block;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+    object-position: center;
+    //width: 100%;
+    border-radius: 1.5rem;
+    //height: 320px;
+
+    @include media-breakpoint-up(lg) {
+        border-radius: 2.5rem;
+        //height: 480px;
+    }
+
+}
+
+.productTitle {
+    //subtitle-EN
+    font-size: 0.875rem;
+    letter-spacing: 0.04em;
+    font-weight: 800;
+    color: $neutral-800;
+    margin-bottom: 0;
+
+    @include media-breakpoint-up(lg) {
+        //title-M-EN
+        font-size: 1.125rem;
+        letter-spacing: 0.04em;
+        font-weight: 800;
+        margin-bottom: 0.25rem;
+    }
+}
+
+.productPrice {
+    //title-S-EN
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    font-weight: 800;
+    color: $neutral-800;
+    margin-bottom: 0;
+
+    @include media-breakpoint-up(lg) {
+        //heading-h6
+        letter-spacing: 0.04em;
+        font-weight: 900;
+        line-height: 1.2;
+        font-size: 1.25rem;
+    }
+
+    &.dismiss {
+        font-size: 0.75rem;
+        letter-spacing: 0.04em;
+        font-weight: 800;
+        color: #726C6B;
+        text-decoration: line-through;
+        @include media-breakpoint-up(lg) {
+            font-size: 1.125rem;
+        }
+    }
+
+    &.onSale {
+        color: $primary-600;
+        @include media-breakpoint-up(lg) {
+            //heading-h5
+            letter-spacing: 0.04em;
+            font-weight: 900;
+            line-height: 1.2;
+            font-size: 1.5rem;
+        }
+    } 
+}
+
+.productBadge {
+    color: #FFF;
+    //caption
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+    padding: 4px 8px 4px 4px;
+    top: 0.5rem;
+    left: 0.5rem;
+
+    @include media-breakpoint-up(lg) {
+        //title-S-CH
+        font-size: 1rem;
+        letter-spacing: 0.04em;
+        font-weight: 700;
+        padding: 8px 12px 8px 8px;
+        top: 1rem;
+        left: 1rem;
+        
+    }
+
+    &-hot {
+        background: #FF961C;
+        top: 0.5rem;
+        left: 0.5rem;
+    
+        @include media-breakpoint-up(lg) {
+            top: 1rem;
+            left: 1rem; 
+        }
+    }
+
+    &-sale {
+        background: #FF5342;
+        top: 0.5rem;
+        left: 5.5rem;
+    
+        @include media-breakpoint-up(lg) {
+            top: 1rem;
+            left: 8.125rem; 
+        }
+    }
+}
