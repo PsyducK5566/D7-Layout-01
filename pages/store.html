@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>商城</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+    
+    <div class="pageTop"></div>
+    <!-- banner -->
+    <section class="position-relative">
+        <div class="background position-absolute bottom-0"></div>
+        <div class="container-fluid px-lg-10 pb-2 pb-lg-8">
+            <div id="carouselBanner" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner carouselBannerImage position-relative">
+                  <div class="carousel-item active">
+                    <img src="../assets/images/心電感應牌卡-banner.jpeg" class="carouselBannerImage" alt="心電感應牌卡">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../assets/images/韋特塔羅牌-banner.jpeg" class="carouselBannerImage" alt="韋特塔羅牌">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../assets/images/香氛-晨曦柑橘-banner.jpg" class="carouselBannerImage" alt="香氛-晨曦柑橘">
+                  </div>
+                </div>
+                <button class="carousel-control-prev opacity-100 mx-11 mx-lg-7" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev">
+                  <img src="../assets/images/Arrow-right.svg" alt="arrow-left" class="bannerBtnArrowLeft align-middle " aria-hidden="true">
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next opacity-100 mx-11 mx-lg-7" type="button" data-bs-target="#carouselBanner" data-bs-slide="next">
+                  <img src="../assets/images/Arrow-right.svg" alt="arrow-right" class="bannerBtnArrowRight align-middle " aria-hidden="true">
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+
+            <!-- <div class="bannerBackground overflow-hidden position-relative pt-6 px-2 p-xxl-0 d-lg-flex justify-content-lg-center align-items-xxl-center">  
+                <div class="d-flex flex-column align-items-center">
+                    <h4 class="bannerTextSize text-neutral-800 mb-2 mb-lg-4">解決內心疑問，轉動命運之輪</h4>
+                    <img src="../assets/images/introduction_Large Head.svg" alt="指引人生方向" class="bannerTextImg mb-4 mb-lg-0">
+                    
+                    <img src="../assets/images/Wheel of Fortune.svg" alt="" class="bannerCardLeft" >
+                    <img src="../assets/images/Wheel of Fortune.svg" alt="" class="bannerCardRight d-none d-xxl-block" >
+                </div>
+                <img src="../assets/images/Union_banner.svg" alt="" class="bannerUnion">
+            </div> -->
+        </div>
+        
+    </section>
+ 
+    <!-- 特別活動 -->
+    <section class="bg-primary-300">
+        <div class="container-fluid px-lg-10 pb-2 pb-lg-8">
+            <div class="pt-8 pb-12 pb-lg-10">
+
+            
+                <div class="d-flex justify-content-center align-items-center storeTitle ">
+                    <img src="../assets/images/Star.svg" alt="star" class="d-block storeTitleStar">
+                    <h3 class="storeTitleFontSize text-neutral-800 mb-0">特別活動</h3>
+                    <img src="../assets/images/Star.svg" alt="star" class="d-block storeTitleStar">
+                </div>
+                <!-- 活動banner -->
+                 <div class="d-lg-flex text-center justify-content-center gap-12">
+                        <img src="../assets/images/活動 Banner-療癒住所.jpg" alt="療癒住所" class="eventBannerImage mb-2">
+                        <img src="../assets/images/活動 Banner-滿千免運.jpg" alt="滿千免運" class="eventBannerImage">
+                 </div>
+
+
+
+
+                
+            </div>  
+        </div>
+    </section>
+
+    <!-- 商品列表 -->
+    <section>
+        <div class="container py-8 pt-lg-20 pb-lg-10">
+            <!-- 標題 -->
+            <div class="d-flex justify-content-center align-items-center storeTitle ">
+                <img src="../assets/images/Star.svg" alt="star" class="d-block storeTitleStar">
+                <h3 class="storeTitleFontSize text-neutral-800 mb-0">商品列表</h3>
+                <img src="../assets/images/Star.svg" alt="star" class="d-block storeTitleStar">
+            </div>
+            <!-- 功能選單 -->
+            <div class="d-lg-flex flex-lg-row-reverse justify-content-lg-between mb-7 mb-lg-10">
+                <!-- 搜尋bar -->
+                <form class="search mb-7 mb-lg-0">
+                    <div class="d-flex  position-relative">
+                        <span class="searchIcon position-absolute">
+                            <i class="bi bi-search" aria-hidden="true"></i>
+                        </span>
+                        <input class="searchBar" type="search" placeholder="搜尋商品名稱" aria-label="Search">
+                    </div>
+                </form>
+
+                <div>
+                    <!-- 排序 -->
+                    <div class="dropdown mb-5 mb-lg-7">
+                        <button class="btn btn-outline-neutral-100 border-2 rounded-3 text-neutral-800 py-2 ps-3 pe-8 dropdown-toggle gap-5" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        排序：人氣排序
+                        </button>
+                        <ul class="dropdown-menu sortDropdown  p-11 mt-11" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item dropdownFont mb-11" href="#">排序：人氣排序</a></li>
+                            <li><a class="dropdown-item dropdownFont mb-11" href="#">價格：由低至高</a></li>
+                            <li><a class="dropdown-item dropdownFont mb-11" href="#">價格：由高至低</a></li>
+                            <li><a class="dropdown-item dropdownFont" href="#">上架時間：由新至舊</a></li>
+                            <img src="../assets/images/tip.svg" alt="" class="dropdown-arrow">
+                        </ul>
+                    </div>
+
+                    <!-- 標籤 -->
+                    <div class=" gap-11">
+                        <button type="button" class="btn btn-outline-primary-500 rounded-pill tagBtn active">
+                            全部
+                        </button>
+                        <button type="button" class="btn btn-outline-primary-500 rounded-pill tagBtn">
+                            卡牌
+                        </button>
+                        <button type="button" class="btn btn-outline-primary-500 rounded-pill tagBtn">
+                            香氛
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 商品 -->
+             <div class="row">
+                <div class="col-6 col-lg-4">
+                    <div class="card border-0 position-relative">
+                        <img src="../assets/images/心電感應牌卡-包裝.jpg" alt="心電感應牌卡" class="productImage mb-2 mb-lg-4">
+                        <a href="#" class="productDesc text-center ">
+                            <h5 class="productTitle">心電感應牌卡</h5>
+                            <p class="productPrice">NT$ 999</p>
+                        </a>
+                        <div class="productBadge productBadge-hot rounded-pill position-absolute">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                                <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
+                              </svg>
+                              <span>人氣商品</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                    <div class="card border-0 position-relative">
+                        <img src="../assets/images/舒眠薰衣.jpg" alt="舒眠薰衣" class="productImage mb-2 mb-lg-4">
+                        <a href="#" class="productDesc text-center ">
+                            <h5 class="productTitle">香氛 - 舒眠薰衣</h5>
+                            <p class="productPrice dismiss">NT$ 1050</p>
+                            <p class="productPrice onSale">NT$ 800</p>
+                        </a>
+                        <div class="productBadge productBadge-hot rounded-pill position-absolute">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                                <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
+                              </svg>
+                              <span>人氣商品</span>
+                        </div>
+                        <div class="productBadge productBadge-sale rounded-pill position-absolute">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-lightning-charge-fill" viewBox="0 0 16 16">
+                                <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/>
+                            </svg>
+                              <span>限時特價</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                    <div class="card border-0 position-relative">
+                        <img src="../assets/images/The Phantomwise Tarot-包裝.jpg" alt="The Phantomwise Tarot" class="productImage mb-2 mb-lg-4">
+                        <a href="#" class="productDesc text-center stretched-link">
+                            <h5 class="productTitle">The Phantomwise Tarot</h5>
+                            <p class="productPrice">NT$ 850</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                    <div class="card border-0 position-relative">
+                        <img src="../assets/images//玫瑰之吻.jpg" alt="玫瑰之吻" class="productImage mb-2 mb-lg-4">
+                        <a href="#" class="productDesc text-center stretched-link">
+                            <h5 class="productTitle">香氛 - 玫瑰之吻</h5>
+                            <p class="productPrice">NT$ 650</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                    <div class="card border-0 position-relative">
+                        <img src="../assets/images/韋特塔羅牌-包裝.jpg" alt="韋特塔羅牌" class="productImage mb-2 mb-lg-4">
+                        <a href="#" class="productDesc text-center ">
+                            <h5 class="productTitle">韋特塔羅牌</h5>
+                            <p class="productPrice">NT$ 890</p>
+                        </a>
+                        <div class="productBadge productBadge-hot rounded-pill position-absolute">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                                <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
+                              </svg>
+                              <span>人氣商品</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                    <div class="card border-0 position-relative">
+                        <img src="../assets/images/柑橘晨曦.jpg" alt="晨曦柑橘" class="productImage mb-2 mb-lg-4">
+                        <a href="#" class="productDesc text-center ">
+                            <h5 class="productTitle">香氛 - 晨曦柑橘</h5>
+                            <p class="productPrice dismiss">NT$ 880</p>
+                            <p class="productPrice onSale">NT$ 780</p>
+                        </a>
+                        <div class="productBadge productBadge-hot rounded-pill position-absolute">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                                <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
+                              </svg>
+                              <span>人氣商品</span>
+                        </div>
+                        <div class="productBadge productBadge-sale rounded-pill position-absolute">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-lightning-charge-fill" viewBox="0 0 16 16">
+                                <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/>
+                            </svg>
+                              <span>限時特價</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                    <div class="card border-0 position-relative">
+                        <img src="../assets/images/森林深處.jpg" alt="森林深處" class="productImage mb-2 mb-lg-4">
+                        <a href="#" class="productDesc text-center ">
+                            <h5 class="productTitle">香氛 - 森林深處</h5>
+                            <p class="productPrice">NT$ 890</p>
+                        </a>
+                        <div class="productBadge productBadge-hot rounded-pill position-absolute">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                                <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
+                              </svg>
+                              <span>人氣商品</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                    <div class="card border-0 position-relative">
+                        <img src="../assets/images/晨光薄荷.jpg" alt="晨光薄荷" class="productImage mb-2 mb-lg-4">
+                        <a href="#" class="productDesc text-center stretched-link">
+                            <h5 class="productTitle">香氛 - 晨光薄荷</h5>
+                            <p class="productPrice">NT$ 850</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                    <div class="card border-0 position-relative">
+                        <img src="../assets/images/木樽之夜.jpg" alt="木樽之夜" class="productImage mb-2 mb-lg-4">
+                        <a href="#" class="productDesc text-center stretched-link">
+                            <h5 class="productTitle">香氛 - 木樽之夜</h5>
+                            <p class="productPrice">NT$ 800</p>
+                        </a>
+                    </div>
+                </div>
+
+
+             </div>
+
+        </div>
+    </section>
+
+
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+</body>
+</html>
